@@ -1,0 +1,19 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shadergraphs/dissolve.shader"
+
+	g_flDissolveSpeed "1.000"
+	g_flEdgeWidth "0.259"
+	g_vEdgeColor "[0.160784 0.000000 1.000000 1.000000]"
+	MainTex "materials/sbox.png"
+	MaskTex "materials/cellNoise_C.png"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Translucent ----
+	g_flAlphaTestReference "0.500"
+	g_flAntiAliasedEdgeStrength "1.000"
+}

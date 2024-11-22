@@ -1,0 +1,925 @@
+{
+  "Model": "models/dev/plane.vmdl",
+  "Description": "",
+  "BlendMode": "Opaque",
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "1760,704",
+      "Albedo": {
+        "Identifier": "33",
+        "Output": "Result"
+      },
+      "Normal": {
+        "Identifier": "66",
+        "Output": "Result"
+      },
+      "Roughness": {
+        "Identifier": "67",
+        "Output": "Result"
+      },
+      "AmbientOcclusion": {
+        "Identifier": "68",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/white_color.tga",
+      "Sampler": {},
+      "UI": {
+        "Name": "Base Texture",
+        "Default": "1,1,1,1",
+        "SrgbRead": true
+      },
+      "Identifier": "1",
+      "Position": "-448,-272",
+      "Coords": {
+        "Identifier": "8",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float4",
+      "Value": "0.97581,1,0.66867,1",
+      "Name": "Micro Tiling Tint",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color"
+      },
+      "Identifier": "2",
+      "Position": "96,48"
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "3",
+      "Position": "-864,-48"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 7,
+      "Identifier": "4",
+      "Position": "-624,16",
+      "A": {
+        "Identifier": "3",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 50,
+      "Value": 1,
+      "Name": "Micro tiling amount",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "5",
+      "Position": "-1296,96"
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "6",
+      "Position": "-864,-288"
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 50,
+      "Value": 1,
+      "Name": "Tiling amount",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "7",
+      "Position": "-1184,-192"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 7,
+      "Identifier": "8",
+      "Position": "-624,-272",
+      "A": {
+        "Identifier": "6",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/white_color.tga",
+      "Sampler": {},
+      "UI": {
+        "Name": "Micro Tiling Base texture",
+        "Default": "1,1,1,1",
+        "SrgbRead": true
+      },
+      "Identifier": "9",
+      "Position": "-160,16",
+      "Coords": {
+        "Identifier": "35",
+        "Output": "Vector"
+      }
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "10",
+      "Position": "-864,-816"
+    },
+    {
+      "_class": "Float4",
+      "Value": "1,1,1,1",
+      "Name": "Color Tint",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color"
+      },
+      "Identifier": "11",
+      "Position": "48,-208"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "12",
+      "Position": "192,-272",
+      "A": {
+        "Identifier": "1",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "11",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "13",
+      "Position": "400,-80",
+      "A": {
+        "Identifier": "9",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "2",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Lerp",
+      "Fraction": 0.5,
+      "Identifier": "14",
+      "Position": "608,-112",
+      "A": {
+        "Identifier": "12",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "13",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "19",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "15",
+      "Position": "-864,-592"
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 50,
+      "Value": 15.431939,
+      "Name": "Micro tiling mask scale",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "16",
+      "Position": "-864,432"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 7,
+      "Identifier": "17",
+      "Position": "-656,320",
+      "A": {
+        "Identifier": "18",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "16",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "18",
+      "Position": "-864,304"
+    },
+    {
+      "_class": "ValueNoise",
+      "Identifier": "19",
+      "Position": "-192,336",
+      "Coords": {
+        "Identifier": "17",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 50,
+      "Value": 19.76912,
+      "Name": "Noise Parameter 1",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "20",
+      "Position": "-864,-704"
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 50,
+      "Value": 12.785649,
+      "Name": "Noise Parameter 2",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "21",
+      "Position": "-864,-496"
+    },
+    {
+      "_class": "ValueNoise",
+      "Identifier": "22",
+      "Position": "-464,-816",
+      "Coords": {
+        "Identifier": "24",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "ValueNoise",
+      "Identifier": "23",
+      "Position": "-464,-592",
+      "Coords": {
+        "Identifier": "25",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "24",
+      "Position": "-624,-816",
+      "A": {
+        "Identifier": "10",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "20",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "25",
+      "Position": "-624,-592",
+      "A": {
+        "Identifier": "15",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "21",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Add",
+      "DefaultA": 0,
+      "DefaultB": 0.5,
+      "Identifier": "26",
+      "Position": "32,-768",
+      "A": {
+        "Identifier": "31",
+        "Output": "X"
+      }
+    },
+    {
+      "_class": "Add",
+      "DefaultA": 0,
+      "DefaultB": 0.5,
+      "Identifier": "27",
+      "Position": "32,-608",
+      "A": {
+        "Identifier": "32",
+        "Output": "X"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "28",
+      "Position": "192,-704",
+      "A": {
+        "Identifier": "26",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "27",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0.885253,
+      "Name": "Noise Contrast",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "29",
+      "Position": "176,-816"
+    },
+    {
+      "_class": "Lerp",
+      "Fraction": 0.5,
+      "Identifier": "30",
+      "Position": "384,-592",
+      "A": {
+        "Identifier": "29",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "28",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SplitVector",
+      "Identifier": "31",
+      "Position": "-256,-816",
+      "Input": {
+        "Identifier": "22",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SplitVector",
+      "Identifier": "32",
+      "Position": "-240,-576",
+      "Input": {
+        "Identifier": "23",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "33",
+      "Position": "672,-416",
+      "A": {
+        "Identifier": "30",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "14",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SplitVector",
+      "Identifier": "34",
+      "Position": "-528,16",
+      "Input": {
+        "Identifier": "4",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CombineVector",
+      "DefaultX": 0,
+      "DefaultY": 0,
+      "DefaultZ": 0,
+      "DefaultW": 0,
+      "Identifier": "35",
+      "Position": "-336,16",
+      "X": {
+        "Identifier": "34",
+        "Output": "Y"
+      },
+      "Y": {
+        "Identifier": "34",
+        "Output": "X"
+      },
+      "Z": {
+        "Identifier": "34",
+        "Output": "Z"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": "",
+      "Identifier": "36",
+      "Position": "-1008,752",
+      "Input": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 7,
+      "Identifier": "37",
+      "Position": "-640,688",
+      "A": {
+        "Identifier": "44",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "36",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "38",
+      "Position": "-880,912"
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/white_color.tga",
+      "Sampler": {},
+      "UI": {
+        "Name": "Base Normal",
+        "Default": "1,1,1,1",
+        "Extension": "Normal",
+        "SrgbRead": true
+      },
+      "Identifier": "39",
+      "Position": "-464,688",
+      "Coords": {
+        "Identifier": "37",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SplitVector",
+      "Identifier": "40",
+      "Position": "-544,976",
+      "Input": {
+        "Identifier": "41",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 7,
+      "Identifier": "41",
+      "Position": "-640,976",
+      "A": {
+        "Identifier": "38",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "63",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CombineVector",
+      "DefaultX": 0,
+      "DefaultY": 0,
+      "DefaultZ": 0,
+      "DefaultW": 0,
+      "Identifier": "42",
+      "Position": "-352,976",
+      "X": {
+        "Identifier": "40",
+        "Output": "Y"
+      },
+      "Y": {
+        "Identifier": "40",
+        "Output": "X"
+      },
+      "Z": {
+        "Identifier": "40",
+        "Output": "Z"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/white_color.tga",
+      "Sampler": {},
+      "UI": {
+        "Name": "Micro Tiling Normal",
+        "Default": "1,1,1,1",
+        "Extension": "Normal",
+        "SrgbRead": true
+      },
+      "Identifier": "43",
+      "Position": "-176,976",
+      "Coords": {
+        "Identifier": "42",
+        "Output": "Vector"
+      }
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "44",
+      "Position": "-880,656"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 7,
+      "Identifier": "45",
+      "Position": "-624,1280",
+      "A": {
+        "Identifier": "60",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "52",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "46",
+      "Position": "-864,1504"
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/white_color.tga",
+      "Sampler": {},
+      "UI": {
+        "Name": "Base Rougness",
+        "Default": "1,1,1,1",
+        "Extension": "Rough",
+        "SrgbRead": true
+      },
+      "Identifier": "47",
+      "Position": "-448,1280",
+      "Coords": {
+        "Identifier": "45",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SplitVector",
+      "Identifier": "48",
+      "Position": "-528,1568",
+      "Input": {
+        "Identifier": "49",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 7,
+      "Identifier": "49",
+      "Position": "-624,1568",
+      "A": {
+        "Identifier": "46",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "64",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CombineVector",
+      "DefaultX": 0,
+      "DefaultY": 0,
+      "DefaultZ": 0,
+      "DefaultW": 0,
+      "Identifier": "50",
+      "Position": "-336,1568",
+      "X": {
+        "Identifier": "48",
+        "Output": "Y"
+      },
+      "Y": {
+        "Identifier": "48",
+        "Output": "X"
+      },
+      "Z": {
+        "Identifier": "48",
+        "Output": "Z"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/white_color.tga",
+      "Sampler": {},
+      "UI": {
+        "Name": "Micro Tiling Rougness",
+        "Default": "1,1,1,1",
+        "Extension": "Rough",
+        "SrgbRead": true
+      },
+      "Identifier": "51",
+      "Position": "-160,1568",
+      "Coords": {
+        "Identifier": "50",
+        "Output": "Vector"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "52",
+      "Position": "-992,1360",
+      "Input": {
+        "Identifier": "36",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 7,
+      "Identifier": "53",
+      "Position": "-624,1904",
+      "A": {
+        "Identifier": "61",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "62",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "54",
+      "Position": "-864,2128"
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/white_color.tga",
+      "Sampler": {},
+      "UI": {
+        "Name": "Base AO",
+        "Default": "1,1,1,1",
+        "Extension": "AO",
+        "SrgbRead": true
+      },
+      "Identifier": "55",
+      "Position": "-448,1904",
+      "Coords": {
+        "Identifier": "53",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SplitVector",
+      "Identifier": "56",
+      "Position": "-528,2192",
+      "Input": {
+        "Identifier": "57",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 7,
+      "Identifier": "57",
+      "Position": "-624,2192",
+      "A": {
+        "Identifier": "54",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "65",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CombineVector",
+      "DefaultX": 0,
+      "DefaultY": 0,
+      "DefaultZ": 0,
+      "DefaultW": 0,
+      "Identifier": "58",
+      "Position": "-336,2192",
+      "X": {
+        "Identifier": "56",
+        "Output": "Y"
+      },
+      "Y": {
+        "Identifier": "56",
+        "Output": "X"
+      },
+      "Z": {
+        "Identifier": "56",
+        "Output": "Z"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/white_color.tga",
+      "Sampler": {},
+      "UI": {
+        "Name": "Micro Tiling AO",
+        "Default": "1,1,1,1",
+        "Extension": "AO",
+        "SrgbRead": true
+      },
+      "Identifier": "59",
+      "Position": "-160,2192",
+      "Coords": {
+        "Identifier": "58",
+        "Output": "Vector"
+      }
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "60",
+      "Position": "-864,1264"
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "61",
+      "Position": "-864,1888"
+    },
+    {
+      "_class": "Reroute",
+      "Comment": "",
+      "Identifier": "62",
+      "Position": "-976,1968",
+      "Input": {
+        "Identifier": "52",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "63",
+      "Position": "-1120,1040",
+      "Input": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "64",
+      "Position": "-1104,1632",
+      "Input": {
+        "Identifier": "63",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "65",
+      "Position": "-1104,2272",
+      "Input": {
+        "Identifier": "64",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Lerp",
+      "Fraction": 0.5,
+      "Identifier": "66",
+      "Position": "336,816",
+      "A": {
+        "Identifier": "39",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "43",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "70",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Lerp",
+      "Fraction": 0.5,
+      "Identifier": "67",
+      "Position": "368,1408",
+      "A": {
+        "Identifier": "47",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "51",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "71",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Lerp",
+      "Fraction": 0.5,
+      "Identifier": "68",
+      "Position": "320,2064",
+      "A": {
+        "Identifier": "55",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "59",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "72",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": "",
+      "Identifier": "69",
+      "Position": "144,544"
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "70",
+      "Position": "16,912",
+      "Input": {
+        "Identifier": "19",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "71",
+      "Position": "32,1520",
+      "Input": {
+        "Identifier": "70",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Reroute",
+      "Comment": "",
+      "Identifier": "72",
+      "Position": "16,2112",
+      "Input": {
+        "Identifier": "71",
+        "Output": "Result"
+      }
+    }
+  ]
+}

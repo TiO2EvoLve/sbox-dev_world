@@ -1,0 +1,23 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shadergraphs/angular.shader"
+
+	//---- Rendering ----
+	F_RENDER_BACKFACES 1
+
+	g_flFresneiPower "1.557"
+	g_flSpeed "5.000"
+	g_vColor "[0.101961 0.901961 0.960784 0.188235]"
+	g_vFresneiColor "[0.545098 0.050980 0.980392 0.466667]"
+	g_vVetexAmount "[5.000 5.000 5.000]"
+	Texture "models/Angular_sphere/angular_sphere.png"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Translucent ----
+	g_flAlphaTestReference "0.715"
+	g_flAntiAliasedEdgeStrength "1.000"
+}

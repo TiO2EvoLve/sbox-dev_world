@@ -1,0 +1,12 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shadergraphs/simpletoon.shader"
+
+	Color "models/brother/texture/body_ext_tex.jpg"
+	g_flbrightness "2.277"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+}

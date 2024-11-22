@@ -1,0 +1,732 @@
+{
+  "Model": null,
+  "Description": "",
+  "BlendMode": "Masked",
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "-80,-48",
+      "Albedo": {
+        "Identifier": "2",
+        "Output": "Result"
+      },
+      "Emission": {
+        "Identifier": "25",
+        "Output": "Result"
+      },
+      "Opacity": {
+        "Identifier": "17",
+        "Output": "Result"
+      },
+      "Normal": {
+        "Identifier": "20",
+        "Output": "Result"
+      },
+      "Roughness": {
+        "Identifier": "26",
+        "Output": "Result"
+      },
+      "Metalness": {
+        "Identifier": "40",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/purple/texture_09.png",
+      "Sampler": {},
+      "UI": {
+        "Name": "A Color",
+        "Default": "1,0.17771,0.17771,1",
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Color"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "1",
+      "Position": "-1392,-1168",
+      "Coords": {
+        "Identifier": "33",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Blend",
+      "Fraction": 0.53,
+      "BlendMode": "Mix",
+      "Clamp": true,
+      "Identifier": "2",
+      "Position": "-1072,-1024",
+      "A": {
+        "Identifier": "1",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "4",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Time",
+      "Identifier": "3",
+      "Position": "-2576,112"
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/green/texture_09.png",
+      "Sampler": {},
+      "UI": {
+        "Name": "B Color",
+        "Default": "1,1,1,1",
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Color"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "4",
+      "Position": "-1392,-944",
+      "Coords": {
+        "Identifier": "33",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Saturate",
+      "Identifier": "5",
+      "Position": "-1952,112",
+      "Input": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Round",
+      "Identifier": "6",
+      "Position": "-2096,112",
+      "Input": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Cosine",
+      "Identifier": "7",
+      "Position": "-2240,112",
+      "Input": {
+        "Identifier": "9",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 1,
+      "Max": 20,
+      "Value": 3.56029,
+      "Name": "Change Speed",
+      "IsAttribute": false,
+      "UI": {
+        "Step": 1,
+        "PrimaryGroup": {
+          "Name": "Controller"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "8",
+      "Position": "-2576,192"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "9",
+      "Position": "-2352,112",
+      "A": {
+        "Identifier": "3",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "8",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "560,512",
+      "Color": "Green",
+      "Title": "Color",
+      "Description": "",
+      "Layer": 5,
+      "Identifier": "10",
+      "Position": "-1440,-1232"
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "560,544",
+      "Color": "Blue",
+      "Title": "Emission",
+      "Description": "",
+      "Layer": 4,
+      "Identifier": "11",
+      "Position": "-1440,-688"
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": null,
+      "Sampler": {},
+      "UI": {
+        "Name": "A Glow",
+        "Default": "1,0.17771,0.17771,1",
+        "Extension": "SelfIllum",
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Glow"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "12",
+      "Position": "-1392,-624",
+      "Coords": {
+        "Identifier": "33",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": null,
+      "Sampler": {},
+      "UI": {
+        "Name": "B Glow",
+        "Default": "0,1,0.08333,1",
+        "Extension": "SelfIllum",
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Glow"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "13",
+      "Position": "-1392,-400",
+      "Coords": {
+        "Identifier": "33",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Blend",
+      "Fraction": 0.53,
+      "BlendMode": "Mix",
+      "Clamp": true,
+      "Identifier": "14",
+      "Position": "-1088,-480",
+      "A": {
+        "Identifier": "12",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "13",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "768,240",
+      "Color": "Blue",
+      "Title": "Controller",
+      "Description": "",
+      "Layer": 6,
+      "Identifier": "15",
+      "Position": "-2592,48"
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": null,
+      "Sampler": {},
+      "UI": {
+        "Name": "B Transparency",
+        "Default": "1,1,1,1",
+        "Extension": "Trans",
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Transparency"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "16",
+      "Position": "-1408,160",
+      "Coords": {
+        "Identifier": "33",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "17",
+      "Position": "-640,48",
+      "A": {
+        "Identifier": "24",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "41",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": null,
+      "Sampler": {},
+      "UI": {
+        "Name": "A Transparency",
+        "Default": "1,1,1,1",
+        "Extension": "Trans",
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Transparency"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "18",
+      "Position": "-1408,-64",
+      "Coords": {
+        "Identifier": "33",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "560,560",
+      "Color": "Purple",
+      "Title": "Normal",
+      "Description": "",
+      "Layer": 3,
+      "Identifier": "19",
+      "Position": "-1440,480"
+    },
+    {
+      "_class": "Blend",
+      "Fraction": 0.53,
+      "BlendMode": "Mix",
+      "Clamp": true,
+      "Identifier": "20",
+      "Position": "-1216,656",
+      "A": {
+        "Identifier": "22",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "21",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": null,
+      "Sampler": {},
+      "UI": {
+        "Name": "B Normal",
+        "Default": "1,1,1,1",
+        "Extension": "Normal",
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Normal"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "21",
+      "Position": "-1424,784",
+      "Coords": {
+        "Identifier": "33",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": null,
+      "Sampler": {},
+      "UI": {
+        "Name": "A Normal",
+        "Default": "1,1,1,1",
+        "Extension": "Normal",
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Normal"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "22",
+      "Position": "-1424,576",
+      "Coords": {
+        "Identifier": "33",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "576,560",
+      "Color": "Yellow",
+      "Title": "Opacity",
+      "Description": "",
+      "Layer": 2,
+      "Identifier": "23",
+      "Position": "-1440,-112"
+    },
+    {
+      "_class": "Blend",
+      "Fraction": 0.53,
+      "BlendMode": "Mix",
+      "Clamp": true,
+      "Identifier": "24",
+      "Position": "-1072,64",
+      "A": {
+        "Identifier": "18",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "16",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "25",
+      "Position": "-480,-256",
+      "A": {
+        "Identifier": "37",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "31",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Blend",
+      "Fraction": 0.53,
+      "BlendMode": "Mix",
+      "Clamp": true,
+      "Identifier": "26",
+      "Position": "-1120,1280",
+      "A": {
+        "Identifier": "30",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "29",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "560,560",
+      "Color": "Orange",
+      "Title": "Rougness",
+      "Description": "",
+      "Layer": 2,
+      "Identifier": "27",
+      "Position": "-1440,1072"
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": null,
+      "Sampler": {},
+      "UI": {
+        "Name": "B Metal",
+        "Default": "1,1,1,1",
+        "Extension": "Metal",
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Metal"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "28",
+      "Position": "-1392,2016",
+      "Coords": {
+        "Identifier": "33",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": null,
+      "Sampler": {},
+      "UI": {
+        "Name": "B Rougness",
+        "Default": "1,1,1,1",
+        "Extension": "Rough",
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Rougness"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "29",
+      "Position": "-1408,1392",
+      "Coords": {
+        "Identifier": "33",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": null,
+      "Sampler": {},
+      "UI": {
+        "Name": "A Rougness",
+        "Default": "1,1,1,1",
+        "Extension": "Rough",
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Rougness"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "30",
+      "Position": "-1408,1184",
+      "Coords": {
+        "Identifier": "33",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float4",
+      "Value": "1,1,1,1",
+      "Name": "Glow Color",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color",
+        "PrimaryGroup": {
+          "Name": "Glow"
+        }
+      },
+      "Identifier": "31",
+      "Position": "-832,-224"
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "32",
+      "Position": "-2240,-480"
+    },
+    {
+      "_class": "TileAndOffset",
+      "DefaultTile": "1,1",
+      "DefaultOffset": "0,0",
+      "WrapTo01": false,
+      "Identifier": "33",
+      "Position": "-1968,-304",
+      "Coords": {
+        "Identifier": "32",
+        "Output": "Result"
+      },
+      "Tile": {
+        "Identifier": "34",
+        "Output": "Result"
+      },
+      "Offset": {
+        "Identifier": "35",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 1,
+      "Max": 10,
+      "Value": 1,
+      "Name": "Coords",
+      "IsAttribute": false,
+      "UI": {
+        "Step": 1,
+        "PrimaryGroup": {
+          "Name": "Color"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "34",
+      "Position": "-2240,-400"
+    },
+    {
+      "_class": "Float",
+      "Min": 1,
+      "Max": 10,
+      "Value": 10,
+      "Name": "Tile",
+      "IsAttribute": false,
+      "UI": {
+        "Step": 1,
+        "PrimaryGroup": {
+          "Name": "Color"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "35",
+      "Position": "-2240,-320"
+    },
+    {
+      "_class": "Float",
+      "Min": 1,
+      "Max": 10,
+      "Value": 1,
+      "Name": "Brightness",
+      "IsAttribute": false,
+      "UI": {
+        "Step": 1,
+        "PrimaryGroup": {
+          "Name": "Glow"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "36",
+      "Position": "-832,-304"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "37",
+      "Position": "-624,-368",
+      "A": {
+        "Identifier": "14",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "36",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": null,
+      "Sampler": {},
+      "UI": {
+        "Name": "A Metal",
+        "Default": "1,0.17771,0.17771,1",
+        "Extension": "Metal",
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Metal"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "38",
+      "Position": "-1392,1792",
+      "Coords": {
+        "Identifier": "33",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "560,560",
+      "Color": "Red",
+      "Title": "Metal",
+      "Description": "",
+      "Layer": 1,
+      "Identifier": "39",
+      "Position": "-1440,1680"
+    },
+    {
+      "_class": "Blend",
+      "Fraction": 0.53,
+      "BlendMode": "Mix",
+      "Clamp": true,
+      "Identifier": "40",
+      "Position": "-1104,1888",
+      "A": {
+        "Identifier": "38",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "28",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 1,
+      "Max": 10,
+      "Value": 1,
+      "Name": "Opacity Power",
+      "IsAttribute": false,
+      "UI": {
+        "Step": 1,
+        "PrimaryGroup": {
+          "Name": "Transparency"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "41",
+      "Position": "-848,192"
+    }
+  ]
+}

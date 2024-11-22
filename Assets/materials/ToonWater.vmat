@@ -1,0 +1,30 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shadergraphs/toonwater.shader"
+
+	//---- Color ----
+	g_vBaseColor "[0.000000 0.200000 0.721569 1.000000]"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- PBR ----
+	g_flOpacity "0.796"
+	g_flRoughness "1.000"
+
+	//---- Translucent ----
+	g_flOpacityScale "1.000"
+
+	//---- Wave ----
+	g_flWavePower "2.655"
+	g_flWaveSpeed "1.000"
+	g_vWaveTile "[10.000 10.000]"
+
+	//---- Wavelet ----
+	g_flWaveletDensity "20"
+	g_flWaveletDistance "5"
+	g_flWaveletSpeed "1"
+	g_vWaveletColor "[0.525490 0.815686 0.988235 1.000000]"
+}

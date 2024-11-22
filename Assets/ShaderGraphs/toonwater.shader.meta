@@ -1,0 +1,19 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "toonwater",
+      "Type": "asset",
+      "Org": "tiowevolve",
+      "Ident": "toonwater",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Metadata": {
+        "SingleAssetSource": "shadergraphs/toonwater.shader"
+      }
+    }
+  }
+}

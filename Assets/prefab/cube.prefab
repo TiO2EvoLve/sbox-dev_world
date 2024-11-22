@@ -1,0 +1,65 @@
+{
+  "RootObject": {
+    "__guid": "52be51bb-d545-4d12-b42d-4d8ac6c64192",
+    "Flags": 0,
+    "Name": "cube",
+    "Tags": "solid",
+    "Enabled": true,
+    "NetworkMode": 1,
+    "Components": [
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "70ce1c84-345a-4765-b910-b8cba5eb2ed3",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {},
+        "MassOverride": 0,
+        "MotionEnabled": true,
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
+      },
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "1f38d5c0-748d-4309-b65d-ae884e074566",
+        "BodyGroups": 18446744073709551615,
+        "MaterialOverride": "materials/holographic.vmat",
+        "Model": "models/dev/sphere.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.SphereCollider",
+        "__guid": "6e18e799-3e9f-4a13-a3b4-c0c71787b274",
+        "Center": "0,0,0",
+        "IsTrigger": false,
+        "Radius": 32.200054,
+        "Static": false
+      },
+      {
+        "__type": "CollisionTest",
+        "__guid": "71cc3117-34ed-4556-bc3b-aad1b404e555",
+        "power": 200000000
+      }
+    ],
+    "Children": [],
+    "__variables": [
+      {
+        "Id": "material",
+        "Title": "material",
+        "Targets": [
+          {
+            "Id": "1f38d5c0-748d-4309-b65d-ae884e074566",
+            "Property": "MaterialOverride"
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

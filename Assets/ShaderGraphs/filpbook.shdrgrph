@@ -1,0 +1,802 @@
+{
+  "Model": "models/dev/plane.vmdl",
+  "Description": "a blend shader with rain",
+  "BlendMode": "Opaque",
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 0.13811843,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "1860,168",
+      "Albedo": {
+        "Identifier": "20",
+        "Output": "Result"
+      },
+      "Normal": {
+        "Identifier": "55",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 1,
+      "Max": 10,
+      "Value": 1,
+      "Name": "A Spray Tiles",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Slider",
+        "Step": 0.2,
+        "PrimaryGroup": {
+          "Name": "Rain"
+        },
+        "SecondaryGroup": {
+          "Name": "A Spray"
+        }
+      },
+      "Identifier": "1",
+      "Position": "-840,276"
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "2",
+      "Position": "-852,192"
+    },
+    {
+      "_class": "Divide",
+      "DefaultA": 0,
+      "DefaultB": 4,
+      "Identifier": "3",
+      "Position": "-360,348",
+      "A": {
+        "Identifier": "45",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Add",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "4",
+      "Position": "-204,384",
+      "A": {
+        "Identifier": "3",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "9",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 1,
+      "Max": 20,
+      "Value": 4,
+      "Name": "Row",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Slider",
+        "Step": 1,
+        "PrimaryGroup": {
+          "Name": "Rain"
+        },
+        "SecondaryGroup": {
+          "Name": "Row And Column"
+        }
+      },
+      "Identifier": "5",
+      "Position": "-1260,336"
+    },
+    {
+      "_class": "Divide",
+      "DefaultA": 1,
+      "DefaultB": 0,
+      "Identifier": "6",
+      "Position": "-792,396",
+      "B": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 1,
+      "Max": 20,
+      "Value": 15,
+      "Name": "A Spray Speed",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Slider",
+        "Step": 1,
+        "PrimaryGroup": {
+          "Name": "Rain"
+        },
+        "SecondaryGroup": {
+          "Name": "A Spray"
+        }
+      },
+      "Identifier": "7",
+      "Position": "-1392,564"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "8",
+      "Position": "-540,408",
+      "A": {
+        "Identifier": "6",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "AppendVector",
+      "Identifier": "9",
+      "Position": "-408,480",
+      "A": {
+        "Identifier": "8",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "12",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Floor",
+      "Identifier": "10",
+      "Position": "-1008,492",
+      "Input": {
+        "Identifier": "15",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Divide",
+      "DefaultA": 1,
+      "DefaultB": 0,
+      "Identifier": "11",
+      "Position": "-816,540",
+      "A": {
+        "Identifier": "10",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "12",
+      "Position": "-552,540",
+      "A": {
+        "Identifier": "6",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "13",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Floor",
+      "Identifier": "13",
+      "Position": "-720,552",
+      "Input": {
+        "Identifier": "11",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Time",
+      "Identifier": "14",
+      "Position": "-1356,480"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "15",
+      "Position": "-1152,492",
+      "A": {
+        "Identifier": "14",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/floor/sidewalk_stone_02b_color_tga_e8f88752.png",
+      "Sampler": {},
+      "UI": {
+        "Name": "Color",
+        "Default": "1,1,1,1",
+        "ShowExtension": true,
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Color"
+        }
+      },
+      "Identifier": "16",
+      "Position": "900,36",
+      "Coords": {
+        "Identifier": "17",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TileAndOffset",
+      "DefaultTile": "1,1",
+      "DefaultOffset": "0,0",
+      "WrapTo01": false,
+      "Identifier": "17",
+      "Position": "684,36",
+      "Tile": {
+        "Identifier": "18",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 1,
+      "Max": 10,
+      "Value": 1,
+      "Name": "Tiles",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Slider",
+        "Step": 1,
+        "Priority": 10,
+        "PrimaryGroup": {
+          "Name": "Color"
+        },
+        "SecondaryGroup": {
+          "Name": "Color"
+        }
+      },
+      "Identifier": "18",
+      "Position": "468,60"
+    },
+    {
+      "_class": "Float4",
+      "Value": "1,1,1,1",
+      "Name": "Tint",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color",
+        "PrimaryGroup": {
+          "Name": "Color"
+        }
+      },
+      "Identifier": "19",
+      "Position": "900,-156"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "20",
+      "Position": "1128,-72",
+      "A": {
+        "Identifier": "19",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "16",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/floor/sidewalk_stone_02b_normal_tga_a9c0ffd7.png",
+      "Sampler": {},
+      "UI": {
+        "Name": "Normal",
+        "Default": "1,1,1,1",
+        "Extension": "Normal",
+        "ShowExtension": true,
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Color"
+        }
+      },
+      "Identifier": "21",
+      "Position": "900,252",
+      "Coords": {
+        "Identifier": "17",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/rain/normalmap.png",
+      "Sampler": {},
+      "UI": {
+        "Name": "A Spray Normal ",
+        "Default": "1,1,1,1",
+        "Extension": "Normal",
+        "ShowExtension": true,
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Rain"
+        }
+      },
+      "Identifier": "22",
+      "Position": "-12,420",
+      "Coords": {
+        "Identifier": "4",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Blend",
+      "Fraction": 0.5,
+      "BlendMode": "Mix",
+      "Clamp": true,
+      "Identifier": "23",
+      "Position": "1296,396",
+      "A": {
+        "Identifier": "21",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "43",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "53",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 2,
+      "Identifier": "24",
+      "Position": "-648,672",
+      "A": {
+        "Identifier": "39",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "51",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Floor",
+      "Identifier": "25",
+      "Position": "-1164,888",
+      "Input": {
+        "Identifier": "37",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 1,
+      "Max": 10,
+      "Value": 2.3094501,
+      "Name": "Rain Spray Tile",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "26",
+      "Position": "528,672"
+    },
+    {
+      "_class": "Float",
+      "Min": 1,
+      "Max": 20,
+      "Value": 15,
+      "Name": "B Spray Speed",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Slider",
+        "Step": 1,
+        "PrimaryGroup": {
+          "Name": "Rain"
+        },
+        "SecondaryGroup": {
+          "Name": "B Spray"
+        }
+      },
+      "Identifier": "27",
+      "Position": "-1512,972"
+    },
+    {
+      "_class": "Floor",
+      "Identifier": "28",
+      "Position": "-876,948",
+      "Input": {
+        "Identifier": "32",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "AppendVector",
+      "Identifier": "29",
+      "Position": "-564,876",
+      "A": {
+        "Identifier": "36",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "33",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Time",
+      "Identifier": "30",
+      "Position": "-1512,876"
+    },
+    {
+      "_class": "Divide",
+      "DefaultA": 1,
+      "DefaultB": 0,
+      "Identifier": "31",
+      "Position": "-912,792",
+      "B": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Divide",
+      "DefaultA": 1,
+      "DefaultB": 0,
+      "Identifier": "32",
+      "Position": "-972,936",
+      "A": {
+        "Identifier": "25",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "33",
+      "Position": "-708,936",
+      "A": {
+        "Identifier": "31",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "28",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Divide",
+      "DefaultA": 0,
+      "DefaultB": 4,
+      "Identifier": "34",
+      "Position": "-516,744",
+      "A": {
+        "Identifier": "24",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Add",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "35",
+      "Position": "-360,780",
+      "A": {
+        "Identifier": "34",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "29",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "36",
+      "Position": "-696,804",
+      "A": {
+        "Identifier": "31",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "25",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "37",
+      "Position": "-1308,888",
+      "A": {
+        "Identifier": "30",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "27",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "38",
+      "Position": "648,756",
+      "A": {
+        "Identifier": "44",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "39",
+      "Position": "-900,648"
+    },
+    {
+      "_class": "TileAndOffset",
+      "DefaultTile": "1,1",
+      "DefaultOffset": "1.5,1.5",
+      "WrapTo01": false,
+      "Identifier": "40",
+      "Position": "-228,768",
+      "Coords": {
+        "Identifier": "35",
+        "Output": "Result"
+      },
+      "Offset": {
+        "Identifier": "56",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "41",
+      "Position": "540,576"
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/rain/normalmap.png",
+      "Sampler": {},
+      "UI": {
+        "Name": "B Spray Normal ",
+        "Default": "1,1,1,1",
+        "Extension": "Normal",
+        "ShowExtension": true,
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Rain"
+        }
+      },
+      "Identifier": "42",
+      "Position": "-12,708",
+      "Coords": {
+        "Identifier": "40",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Blend",
+      "Fraction": 0.5,
+      "BlendMode": "Mix",
+      "Clamp": true,
+      "Identifier": "43",
+      "Position": "252,504",
+      "A": {
+        "Identifier": "22",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "42",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Time",
+      "Identifier": "44",
+      "Position": "432,756"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 2,
+      "Identifier": "45",
+      "Position": "-528,264",
+      "A": {
+        "Identifier": "2",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "1",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/rain/rain_normal.png",
+      "Sampler": {},
+      "UI": {
+        "Name": "flowing water normal",
+        "Default": "1,1,1,1",
+        "Extension": "Normal",
+        "ShowExtension": true,
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "flowing water"
+        }
+      },
+      "Identifier": "46",
+      "Position": "1308,648",
+      "Coords": {
+        "Identifier": "47",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TileAndOffset",
+      "DefaultTile": "1,1",
+      "DefaultOffset": "0,0",
+      "WrapTo01": false,
+      "Identifier": "47",
+      "Position": "1104,876",
+      "Offset": {
+        "Identifier": "50",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Time",
+      "Identifier": "48",
+      "Position": "720,936"
+    },
+    {
+      "_class": "Blend",
+      "Fraction": 0.07529209,
+      "BlendMode": "Mix",
+      "Clamp": true,
+      "Identifier": "49",
+      "Position": "1500,492",
+      "A": {
+        "Identifier": "23",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "46",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 0.1,
+      "Identifier": "50",
+      "Position": "924,960",
+      "A": {
+        "Identifier": "48",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "52",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 1,
+      "Max": 10,
+      "Value": 1,
+      "Name": "B Spray Tiles",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Slider",
+        "Step": 0.2,
+        "PrimaryGroup": {
+          "Name": "Rain"
+        },
+        "SecondaryGroup": {
+          "Name": "B Spray "
+        }
+      },
+      "Identifier": "51",
+      "Position": "-900,720"
+    },
+    {
+      "_class": "Float",
+      "Min": 1,
+      "Max": 10,
+      "Value": 1,
+      "Name": "flowing water speed",
+      "IsAttribute": false,
+      "UI": {
+        "PrimaryGroup": {
+          "Name": "flowing water"
+        }
+      },
+      "Identifier": "52",
+      "Position": "720,1032"
+    },
+    {
+      "_class": "SimplexNoise",
+      "Identifier": "53",
+      "Position": "1020,564",
+      "Coords": {
+        "Identifier": "54",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TileAndOffset",
+      "DefaultTile": "1,1",
+      "DefaultOffset": "0,0",
+      "WrapTo01": false,
+      "Identifier": "54",
+      "Position": "816,564",
+      "Coords": {
+        "Identifier": "41",
+        "Output": "Result"
+      },
+      "Tile": {
+        "Identifier": "26",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Normalize",
+      "Identifier": "55",
+      "Position": "1680,492",
+      "Input": {
+        "Identifier": "49",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 10,
+      "Value": 0,
+      "Name": "B Offset",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "56",
+      "Position": "-516,984"
+    }
+  ]
+}

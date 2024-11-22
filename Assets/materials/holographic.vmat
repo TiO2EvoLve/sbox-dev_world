@@ -1,0 +1,19 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shadergraphs/holographic.shader"
+
+	g_flSpeed "0.589"
+	g_vColorA "[0.000000 1.000000 0.678431 1.000000]"
+	g_vColorB "[0.000000 1.000000 0.831373 1.000000]"
+	g_vMix "[0.000 1.000]"
+	g_vScale "[0.000 9.363]"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Translucent ----
+	g_flAlphaTestReference "0.500"
+	g_flAntiAliasedEdgeStrength "1.000"
+}

@@ -1,0 +1,45 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "devtest",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "devtest",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "facepunch.oil_drum#18226",
+        "facepunch.oildrumexplosive#26722",
+        "tiowevolve.dev_dark_03#52952",
+        "tiowevolve.dev_dark_13#52962",
+        "tiowevolve.dev_green_02#52964",
+        "tiowevolve.dev_green_08#52970",
+        "tiowevolve.dev_green_10#52972",
+        "tiowevolve.dev_green_11#52973",
+        "tiowevolve.dev_light_02#52977",
+        "tiowevolve.dev_light_06#52981",
+        "tiowevolve.dev_light_07#52982",
+        "tiowevolve.dev_light_08#52983",
+        "tiowevolve.dev_light_12#52987",
+        "tiowevolve.dev_orange_02#52990",
+        "tiowevolve.dev_orange_05#52993",
+        "tiowevolve.dev_orange_12#53032",
+        "tiowevolve.dev_purple_01#53003",
+        "tiowevolve.dev_purple_02#53004",
+        "tiowevolve.dev_purple_05#53007",
+        "tiowevolve.dev_purple_11#53013",
+        "tiowevolve.dev_purple_12#53014",
+        "tiowevolve.dev_red_01#53016",
+        "tiowevolve.dev_red_02#53017"
+      ],
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "maps/devtest.vmap",
+        "ParentPackage": "tiowevolve.dev_world"
+      }
+    }
+  }
+}

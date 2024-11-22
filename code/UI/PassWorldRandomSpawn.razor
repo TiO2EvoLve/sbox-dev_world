@@ -1,0 +1,25 @@
+@using System
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<div class="title">@Passworld</div>
+</root>
+
+@code
+{
+
+	int Passworld;
+
+	[Property] public PassWorld PassWorld;
+
+	protected override void OnAwake()
+	{
+		Random random = new Random();
+		Passworld = random.Next(1000, 10000);
+		PassWorld.passworld = Passworld.ToString();
+	}
+
+	protected override int BuildHash() => System.HashCode.Combine( Passworld );
+}

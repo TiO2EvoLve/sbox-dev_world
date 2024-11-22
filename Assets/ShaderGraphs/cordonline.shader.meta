@@ -1,0 +1,20 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "cordonline",
+      "Type": "shader",
+      "Org": "tiowevolve",
+      "Ident": "cordonline",
+      "Tags": null,
+      "Schema": 0,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Metadata": {
+        "SingleAssetSource": "shadergraphs/cordonline.shader"
+      }
+    }
+  }
+}

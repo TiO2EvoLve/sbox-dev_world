@@ -1,0 +1,45 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shadergraphs/changetexture.shader"
+
+	//---- Color ----
+	AColor "materials/dev/texture_06.png"
+	BColor "materials/dev/texture_08.png"
+	g_flCoords "1"
+	g_flTile "1"
+
+	//---- Controller ----
+	g_flChangeSpeed "4"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Glow ----
+	AGlow "materials/default/default_selfillum.tga"
+	BGlow "materials/default/default_selfillum.tga"
+	g_flBrightness "1"
+	g_vGlowColor "[1.000000 1.000000 1.000000 1.000000]"
+
+	//---- Metal ----
+	AMetal "materials/default/default_metal.tga"
+	BMetal "materials/default/default_metal.tga"
+
+	//---- Normal ----
+	ANormal "materials/default/default_normal.tga"
+	BNormal "materials/default/default_normal.tga"
+
+	//---- Rougness ----
+	ARougness "[1.000000 1.000000 1.000000 0.000000]"
+	BRougness "[1.000000 1.000000 1.000000 0.000000]"
+
+	//---- Translucent ----
+	g_flAlphaTestReference "0.500"
+	g_flAntiAliasedEdgeStrength "1.000"
+
+	//---- Transparency ----
+	ATransparency "materials/default/default_trans.tga"
+	BTransparency "materials/default/default_trans.tga"
+	g_flOpacityPower "1"
+}

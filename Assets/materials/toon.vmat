@@ -1,0 +1,23 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shader/toon.shader"
+
+	Color "materials/default/default_color.tga"
+	g_vShadedColor "[0.219608 0.435294 0.623529 1.000000]"
+
+	//---- Color Tint ----
+	g_vColorTint "[0.000000 1.000000 0.980392 1.000000]"
+
+	//---- Rim ----
+	g_flRimAmount "0.744"
+	g_flRimThreshold "0.000"
+	g_vRimColor "[0.000000 0.113725 0.156863 1.000000]"
+
+	//---- Specular ----
+	g_flSpecularThreshold "0.085"
+	TextureRoughness "materials/default/default_rough.tga"
+	TextureSpecularAlpha "materials/default/default_mask.tga"
+	TextureSpecularColor "materials/default/default_mask.tga"
+}

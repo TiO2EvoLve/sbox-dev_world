@@ -1,0 +1,12 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shadergraphs/simpletoon.shader"
+
+	Color "models/brother/texture/metal_tex.jpg"
+	g_flbrightness "2.000"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+}

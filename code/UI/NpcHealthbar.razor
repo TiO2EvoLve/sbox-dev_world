@@ -1,0 +1,16 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<div class="fill" style="width: @(Health)%"></div>
+</root>
+
+@code
+{
+
+	[Property, Range(0,100)] public int Health{ get; set; } = 100;
+
+	
+	protected override int BuildHash() => System.HashCode.Combine( Health );
+}

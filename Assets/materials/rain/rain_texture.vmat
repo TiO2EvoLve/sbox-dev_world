@@ -1,0 +1,31 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shadergraphs/filpbook.shader"
+
+	g_flBOffset "2.529"
+	g_flRainSprayTile "1.000"
+
+	//---- Color ----
+	Color "materials/floor/sidewalk_stone_02b_color_tga_e8f88752.png"
+	g_flTiles "1"
+	g_vTint "[1.000000 1.000000 1.000000 1.000000]"
+	Normal "materials/floor/sidewalk_stone_02b_normal_tga_a9c0ffd7.png"
+
+	//---- flowing water ----
+	flowingwaternormal "materials/rain/rain_normal.png"
+	g_flflowingwaterspeed "1.000"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Rain ----
+	ASprayNormal "materials/rain/NormalMap.png"
+	BSprayNormal "materials/rain/NormalMap.png"
+	g_flASpraySpeed "15"
+	g_flASprayTiles "1.0"
+	g_flBSpraySpeed "15"
+	g_flBSprayTiles "1.6"
+	g_flRow "4"
+}

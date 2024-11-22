@@ -1,0 +1,210 @@
+{
+  "Model": "models/dev/plane.vmdl",
+  "Description": "",
+  "BlendMode": "Opaque",
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 1,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "896,-112",
+      "Albedo": {
+        "Identifier": "7",
+        "Output": "Result"
+      },
+      "Roughness": {
+        "Identifier": "13",
+        "Output": "Result"
+      },
+      "Metalness": {
+        "Identifier": "11",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "1",
+      "Position": "-288,-128"
+    },
+    {
+      "_class": "DotProduct",
+      "Identifier": "2",
+      "Position": "-48,-64",
+      "InputA": {
+        "Identifier": "1",
+        "Output": "Result"
+      },
+      "InputB": {
+        "Identifier": "8",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Frac",
+      "Identifier": "3",
+      "Position": "144,-48",
+      "Input": {
+        "Identifier": "2",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Step",
+      "DefaultInput": 0.5,
+      "DefaultEdge": 0.5,
+      "Identifier": "4",
+      "Position": "272,-48",
+      "Input": {
+        "Identifier": "3",
+        "Output": "Result"
+      },
+      "Edge": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float4",
+      "Value": "0.15361,0.07681,0,1",
+      "Name": "ColorA",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color",
+        "PrimaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "5",
+      "Position": "256,-400"
+    },
+    {
+      "_class": "Float4",
+      "Value": "0.85843,0.24322,0,1",
+      "Name": "ColorB",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color",
+        "PrimaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "6",
+      "Position": "256,-224"
+    },
+    {
+      "_class": "Lerp",
+      "Fraction": 0.5,
+      "Identifier": "7",
+      "Position": "544,-224",
+      "A": {
+        "Identifier": "5",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "6",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "4",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float2",
+      "Min": "0,0",
+      "Max": "100,100",
+      "Value": "11.7,10",
+      "Name": "Controller",
+      "IsAttribute": false,
+      "UI": {
+        "PrimaryGroup": {
+          "Name": ""
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "8",
+      "Position": "-288,-48"
+    },
+    {
+      "_class": "FuzzyNoise",
+      "Identifier": "9",
+      "Position": "512,-32"
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0.5,
+      "Name": "ratio",
+      "IsAttribute": false,
+      "UI": {
+        "PrimaryGroup": {
+          "Name": ""
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "10",
+      "Position": "48,64"
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0.7634363,
+      "Name": "Metal",
+      "IsAttribute": false,
+      "UI": {
+        "PrimaryGroup": {
+          "Name": ""
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "11",
+      "Position": "576,112"
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 10,
+      "Value": 0.7634363,
+      "Name": "decal",
+      "IsAttribute": false,
+      "UI": {
+        "PrimaryGroup": {
+          "Name": ""
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "12",
+      "Position": "512,32"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 8.5,
+      "Identifier": "13",
+      "Position": "720,-32",
+      "A": {
+        "Identifier": "9",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "12",
+        "Output": "Result"
+      }
+    }
+  ]
+}

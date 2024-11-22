@@ -1,0 +1,323 @@
+{
+  "Model": null,
+  "Description": "",
+  "BlendMode": "Opaque",
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "1120,48",
+      "Albedo": {
+        "Identifier": "17",
+        "Output": "Result"
+      },
+      "PositionOffset": {
+        "Identifier": "16",
+        "Output": "Vector"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 10,
+      "Value": 1,
+      "Name": "Speed",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Slider",
+        "Step": 1,
+        "PrimaryGroup": {
+          "Name": ""
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "1",
+      "Position": "-720,0"
+    },
+    {
+      "_class": "Time",
+      "Identifier": "2",
+      "Position": "-720,96"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "3",
+      "Position": "-480,64",
+      "A": {
+        "Identifier": "1",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "2",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "ObjectPosition",
+      "Identifier": "4",
+      "Position": "-576,-192"
+    },
+    {
+      "_class": "Add",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "5",
+      "Position": "-320,32",
+      "A": {
+        "Identifier": "4",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 20,
+      "Value": 10,
+      "Name": "Frequency",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Slider",
+        "Step": 1,
+        "PrimaryGroup": {
+          "Name": ""
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "6",
+      "Position": "-400,176"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "7",
+      "Position": "-160,80",
+      "A": {
+        "Identifier": "5",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Sine",
+      "Identifier": "8",
+      "Position": "0,80",
+      "Input": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 10,
+      "Value": 1,
+      "Name": "Amplitude",
+      "IsAttribute": false,
+      "UI": {
+        "PrimaryGroup": {
+          "Name": ""
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "9",
+      "Position": "-64,-32"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "10",
+      "Position": "176,48",
+      "A": {
+        "Identifier": "9",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "8",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float3",
+      "Min": "0,0,0",
+      "Max": "10,10,10",
+      "Value": "1,1,1",
+      "Name": "Axis",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Slider",
+        "Step": 1
+      },
+      "Identifier": "11",
+      "Position": "-128,-352"
+    },
+    {
+      "_class": "SplitVector",
+      "Identifier": "12",
+      "Position": "96,-256",
+      "Input": {
+        "Identifier": "11",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "13",
+      "Position": "336,-256",
+      "A": {
+        "Identifier": "12",
+        "Output": "X"
+      },
+      "B": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "14",
+      "Position": "336,-96",
+      "A": {
+        "Identifier": "12",
+        "Output": "Y"
+      },
+      "B": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "15",
+      "Position": "336,80",
+      "A": {
+        "Identifier": "12",
+        "Output": "Z"
+      },
+      "B": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CombineVector",
+      "DefaultX": 0,
+      "DefaultY": 0,
+      "DefaultZ": 0,
+      "DefaultW": 1,
+      "Identifier": "16",
+      "Position": "864,-48",
+      "X": {
+        "Identifier": "20",
+        "Output": "Result"
+      },
+      "Y": {
+        "Identifier": "21",
+        "Output": "Result"
+      },
+      "Z": {
+        "Identifier": "22",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float4",
+      "Value": "0.21176,1,0.01176,1",
+      "Name": "Color",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color",
+        "PrimaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "17",
+      "Position": "864,128"
+    },
+    {
+      "_class": "ObjectPosition",
+      "Identifier": "18",
+      "Position": "80,256"
+    },
+    {
+      "_class": "SplitVector",
+      "Identifier": "19",
+      "Position": "288,272",
+      "Input": {
+        "Identifier": "18",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Add",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "20",
+      "Position": "560,-192",
+      "A": {
+        "Identifier": "19",
+        "Output": "X"
+      },
+      "B": {
+        "Identifier": "13",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Add",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "21",
+      "Position": "560,-64",
+      "A": {
+        "Identifier": "19",
+        "Output": "Y"
+      },
+      "B": {
+        "Identifier": "14",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Add",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "22",
+      "Position": "560,80",
+      "A": {
+        "Identifier": "19",
+        "Output": "Z"
+      },
+      "B": {
+        "Identifier": "15",
+        "Output": "Result"
+      }
+    }
+  ]
+}

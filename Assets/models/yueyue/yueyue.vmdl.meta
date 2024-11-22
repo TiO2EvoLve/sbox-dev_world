@@ -1,0 +1,19 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "toon",
+      "Type": "model",
+      "Org": "tiowevolve",
+      "Ident": "yueyue",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Metadata": {
+        "SingleAssetSource": "models/yueyue/yueyue.vmdl"
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "box_parallax",
+      "Type": "shader",
+      "Org": "tiowevolve",
+      "Ident": "box_parallax",
+      "Tags": null,
+      "Schema": 0,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Metadata": {
+        "SingleAssetSource": "shadergraphs/box_parallax.shader"
+      }
+    }
+  }
+}

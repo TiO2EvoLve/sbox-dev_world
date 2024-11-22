@@ -1,0 +1,57 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<div class="title">depth</div>
+	
+	<div class="box">
+		<div class="operate" onclick=@subtract>-</div>
+		<div class="operatecenter">
+			<SliderControl Value:bind="@depthvalue" Min=@( 0 ) Max=@(10) Step=@( 1f ) ShowRange/>
+		</div>
+		
+		<div class="operate" onclick=@add>+</div>
+	</div>
+	
+</root>
+
+@code
+{
+
+	public float depthvalue = 5;
+
+	
+	void subtract()
+	{
+		if ( depthvalue > 0 )
+		{
+			depthvalue--;
+			SetAttributes();
+		}
+		
+		
+	}
+
+	void add()
+	{
+		if ( depthvalue <10  )
+		{
+			depthvalue++;
+			SetAttributes();
+		}
+		
+	}
+
+	
+	[Property] public ModelRenderer ModelRenderer;
+
+	
+	
+	void SetAttributes()
+	{
+		ModelRenderer.MaterialOverride.Attributes.Set( "depth_value", depthvalue );
+	}
+
+	protected override int BuildHash() => System.HashCode.Combine( depthvalue);
+}

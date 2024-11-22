@@ -1,0 +1,20 @@
+{
+  "publish": {
+    "Allowed": false,
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "parallax shader",
+      "Type": "asset_type_not_allowed",
+      "Org": "tiowevolve",
+      "Ident": "parallax",
+      "Tags": "shadergraph parallax",
+      "Schema": 0,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Metadata": {
+        "SingleAssetSource": "shadergraphs/parallax.shdrgrph"
+      }
+    }
+  }
+}

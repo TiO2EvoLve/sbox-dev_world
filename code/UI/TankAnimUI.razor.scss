@@ -1,0 +1,114 @@
+TankAnimUI
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #444;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	border-radius: 20px;
+	flex-direction: column;
+	pointer-events: all;
+	
+	background-color: rgba(190, 190, 190, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(10px);
+	gap: 50px;
+	
+	.title
+	{
+		font-size: 60px;
+		font-family: Poppins, serif;
+		color: #ff527c;
+		margin-top: 30px;
+	}
+
+	.operatecenter{
+
+		margin: 10px;
+		width: 70%;
+		SliderControl{
+			width: 200px;
+		}
+	}
+
+	.box{
+		top:20px;
+		justify-content: flex-start;
+		align-items: center;
+		width: 80%;
+	}
+
+	.head-text{
+		height:40px ;
+		width: 100px;
+		font-size: 20px;
+		background-color: #67ff6a;
+		justify-content: center;
+		align-items: center;
+		border-radius: 5px;
+		margin-right: 20px;
+	}
+
+	SliderControl{
+		height: 10px;
+	}
+	
+	.operate{
+		width: 40px;
+		height: 40px;
+		justify-content: center;
+		align-items: center;
+		font-size: 20px;
+		background-color: #ff527c;
+		border-radius: 10px;
+	}
+	.operate:hover{
+		background-color: #73ff7c;
+	}
+	.melee-check{
+		background-color: #ff527c;
+		justify-content: center;
+		align-items: center;
+		font-size: 20px;
+		width: 40px;
+		height: 40px;
+		border-radius: 10px;
+		opacity: 0.95;
+	}
+	.melee-check:hover{
+		background-color: #73ff7c;
+	}
+
+	.style-item{
+		background-color: #ff527c;
+		justify-content: center;
+		align-items: center;
+		font-size: 20px;
+		width: 150px;
+		height: 40px;
+		border-radius: 10px;
+		opacity: 0.95;
+		margin-left: 20px;
+	}
+	
+	
+	.restart-button{
+		background-color: #ff527c;
+		justify-content: center;
+		align-items: center;
+		font-size: 20px;
+		width: 500px;
+		height: 50px;
+		border-radius: 10px;
+		opacity: 0.95;
+	}
+	.restart-button:hover{
+		background-color: #73ff7c;
+	}
+}

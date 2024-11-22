@@ -1,0 +1,12 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shadergraphs/box_parallax.shader"
+
+	Color "materials/wP_Retail_v1_R00_S_night_3k.png"
+	g_flDepth "1.000"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+}

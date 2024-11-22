@@ -1,0 +1,25 @@
+NpcHealthbar
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(206, 206, 206, 0.76);
+	justify-content: flex-start;
+	align-items: center;
+	font-weight: bold;
+	border-radius: 20px;
+	border: 2px ;
+
+	.fill
+	{
+		border-radius: 20px;
+		background: #f8356b;
+		width: 100%;
+		height: 100%;
+		font-size: 25px;
+		font-family: Poppins;
+		color: #fff;
+	}
+}

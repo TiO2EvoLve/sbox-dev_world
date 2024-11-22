@@ -1,0 +1,21 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shaders/decal.shader"
+
+	//---- Ambient Occlusion ----
+	TextureAmbientOcclusion "materials/tiles108/tiles108_1k-png_ambientocclusion.png"
+
+	//---- Color ----
+	TextureColor "materials/show/cubmap.png"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Lighting ----
+	g_flGlossiness "0.200"
+
+	//---- Metalness ----
+	TextureMetalness "materials/default/default_metal.tga"
+}

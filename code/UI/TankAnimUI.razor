@@ -1,0 +1,164 @@
+@using System
+@using System.Threading.Tasks
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<div class="title">Anim Parameters</div>
+	
+	<div class="box">
+		<div class="head-text">Move_X</div>
+		<div class="operate" onclick=@subtractX>-</div>
+		<div class="operatecenter">
+			<SliderControl Value:bind="@move_x" Min=@( 0 ) Max=@(177) Step=@( 10f ) ShowRange/>
+		</div>
+
+		<div class="operate" onclick=@addX>+</div>
+	</div>
+	
+	<div class="box">
+		<div class="head-text">Move_Y</div>
+		<div class="operate" onclick=@subtractY>-</div>
+		<div class="operatecenter">
+			<SliderControl Value:bind="@move_y" Min=@( 0 ) Max=@(177) Step=@( 10f ) ShowRange/>
+		</div>
+
+		
+		<div class="operate" onclick=@addY>+</div>
+	</div>
+	
+	<div class="box">
+		<div class="head-text">Melee</div>
+		<div class="melee-check" onclick=@Melee></div>
+		
+	</div>
+	
+	<div class="box">
+		<div class="head-text">Throw</div>
+		<div class="melee-check" onclick=@Throw></div></div>
+	
+	
+	<div class="box">
+		<div class="head-text">Throw Style</div>
+		<div class="style-item" onclick="@(()=>ChangeItem(180))" style="@backgroundColor">High</div>
+		<div class="style-item" onclick="@(()=>ChangeItem(90))" style="@backgroundColor1">Centre</div>
+		<div class="style-item" onclick="@(()=>ChangeItem(45))" style="@backgroundColor2">Low</div>
+		</div>
+	
+	
+	<div class="restart-button" onclick=@ResetDefaultValue>Reset</div>
+</root>
+
+@code
+{
+
+	[Property] public SkinnedModelRenderer tank;
+	public float move_x = 0;
+	public float move_y = 0;
+
+	float thorw_style = 45;
+	String backgroundColor = "background-color: #ff527c;";
+	String backgroundColor1 = "background-color: #ff527c;";
+	String backgroundColor2 = "background-color: #ff527c;";
+
+	void subtractX()
+	{
+		if ( move_x > 0 )
+		{
+			move_x= move_x - 10;
+			tank.Set( "move_x",move_x );
+		}
+		
+		
+	}
+	void addX()
+	{
+		if ( move_x <177  )
+		{
+			move_x = move_x+ 10;
+			tank.Set( "move_x",move_x );
+		}
+		
+	}
+	
+	void subtractY()
+	{
+		if ( move_y > 0 )
+		{
+			move_y= move_y - 10;
+			tank.Set( "move_y",move_y );
+		}
+		
+		
+	}
+	void addY()
+	{
+		if ( move_y <177  )
+		{
+			move_y = move_y+ 10;
+			tank.Set( "move_y",move_y );
+		}
+		
+	}
+
+	async Task Melee()
+	{
+	
+		tank.Set( "Melee",true );
+		await Task.DelaySeconds( 1);
+		tank.Set( "Melee",false );
+		
+	}
+	
+	async Task Throw()
+	{
+		tank.Set( "Throw_Angle_Y",thorw_style);
+		tank.Set( "Throw_Angle_X",0);
+		tank.Set( "Throw",true );
+		await Task.DelaySeconds( 1);
+		tank.Set( "Throw",false );
+	}
+
+	void ChangeItem(int value)
+	{
+		thorw_style = value;
+		ChangeColor( value );
+	}
+
+	void ChangeColor( int value )
+	{
+		if ( value == 45 )
+		{
+			ClearColor();
+			backgroundColor2 = "background-color: #73ff7c;";
+		}
+		else if(value == 90)
+		{
+			ClearColor();
+			backgroundColor1 = "background-color: #73ff7c;";
+		}else if(value == 180)
+		{
+			ClearColor();
+			 backgroundColor = "background-color: #73ff7c;";
+		}
+	}
+
+	void ClearColor()
+	{
+		backgroundColor = "background-color: #ff527c;";
+		backgroundColor1 = "background-color: #ff527c;";
+		backgroundColor2 = "background-color: #ff527c;";
+	}
+	
+	void ResetDefaultValue()
+	{
+		move_x = 0;
+		move_y = 0;
+		tank.Set( "move_x",0 );
+		tank.Set( "move_y",0 );
+	}
+	
+	
+	protected override int BuildHash() => System.HashCode.Combine( move_x,move_y,thorw_style ,backgroundColor,backgroundColor1,backgroundColor2);
+}

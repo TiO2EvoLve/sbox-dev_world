@@ -1,0 +1,30 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shadergraphs/parallax.shader"
+
+	AO "materials/default/default_ao.tga"
+	Color "materials/metal/black_wall_metal.png"
+	Emission "materials/default/default_selfillum.tga"
+	g_fldepth "1.505"
+	g_vOffset "[0.000 0.000]"
+	g_vTile "[1.000 1.000]"
+	Metal "[0.850000 0.850000 0.850000 0.000000]"
+	Normal "materials/metal/black_wall_metal_normal.png"
+	Opacity "materials/default/default_trans.tga"
+	Rough "[0.190000 0.190000 0.190000 0.000000]"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	Attributes
+	{
+		depth_value ""
+	}
+
+	DynamicParams
+	{
+		g_fldepth "depth_value"
+	}
+}

@@ -1,0 +1,21 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shadergraphs/flowingwater.shader"
+
+	g_flbrightness "2.237"
+	g_flmax "1.351"
+	g_flmin "-1.070"
+	g_flSpeed "0.789"
+	g_flthickness "50.000"
+	g_vColorA "[0.149020 0.000000 1.000000 1.000000]"
+	g_vColorB "[0.000000 0.623529 0.854902 1.000000]"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Translucent ----
+	g_flAlphaTestReference "0.246"
+	g_flAntiAliasedEdgeStrength "0.855"
+}

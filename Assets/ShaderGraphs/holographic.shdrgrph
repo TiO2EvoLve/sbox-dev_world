@@ -1,0 +1,249 @@
+{
+  "Model": null,
+  "Description": "",
+  "BlendMode": "Masked",
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 0.21926823,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "1836,-228",
+      "Albedo": {
+        "Identifier": "16",
+        "Output": "Result"
+      },
+      "Opacity": {
+        "Identifier": "15",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "1",
+      "Position": "-48,-288"
+    },
+    {
+      "_class": "TileAndOffset",
+      "DefaultTile": "1,1",
+      "DefaultOffset": "0,0",
+      "WrapTo01": false,
+      "Identifier": "2",
+      "Position": "180,-276",
+      "Coords": {
+        "Identifier": "1",
+        "Output": "Result"
+      },
+      "Tile": {
+        "Identifier": "3",
+        "Output": "XY"
+      },
+      "Offset": {
+        "Identifier": "10",
+        "Output": "XY"
+      }
+    },
+    {
+      "_class": "CombineVector",
+      "DefaultX": 1,
+      "DefaultY": 0,
+      "DefaultZ": 1,
+      "DefaultW": 0,
+      "Identifier": "3",
+      "Position": "-48,-204",
+      "X": {
+        "Identifier": "11",
+        "Output": "X"
+      },
+      "Y": {
+        "Identifier": "11",
+        "Output": "Y"
+      }
+    },
+    {
+      "_class": "Time",
+      "Identifier": "4",
+      "Position": "-384,-60"
+    },
+    {
+      "_class": "SimplexNoise",
+      "Identifier": "5",
+      "Position": "384,-228",
+      "Coords": {
+        "Identifier": "2",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Fresnel",
+      "DefaultPower": 10,
+      "Identifier": "6",
+      "Position": "564,-348"
+    },
+    {
+      "_class": "Fresnel",
+      "DefaultPower": 10,
+      "Identifier": "7",
+      "Position": "576,-204",
+      "Power": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float2",
+      "Min": "0,0",
+      "Max": "1,1",
+      "Value": "0,1",
+      "Name": "Mix",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "8",
+      "Position": "780,-144"
+    },
+    {
+      "_class": "Float4",
+      "Value": "0,1,0.83333,1",
+      "Name": "ColorB",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color",
+        "PrimaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "9",
+      "Position": "1008,-516"
+    },
+    {
+      "_class": "CombineVector",
+      "DefaultX": 0,
+      "DefaultY": 0,
+      "DefaultZ": 0,
+      "DefaultW": 0,
+      "Identifier": "10",
+      "Position": "-48,-60",
+      "X": {
+        "Identifier": "12",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float2",
+      "Min": "0,0",
+      "Max": "20,20",
+      "Value": "0,9.362746",
+      "Name": "Scale",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "11",
+      "Position": "-384,-228"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "12",
+      "Position": "-156,-36",
+      "A": {
+        "Identifier": "4",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "13",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0.5888093,
+      "Name": "Speed",
+      "IsAttribute": false,
+      "UI": {
+        "PrimaryGroup": {
+          "Name": ""
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "13",
+      "Position": "-384,0"
+    },
+    {
+      "_class": "Float4",
+      "Value": "0,1,0.68333,1",
+      "Name": "ColorA",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Color",
+        "PrimaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "14",
+      "Position": "780,-516"
+    },
+    {
+      "_class": "RemapValue",
+      "In": 0.5,
+      "InMin": 0,
+      "InMax": 1,
+      "OutMin": 0,
+      "OutMax": 0.9811754,
+      "Clamp": true,
+      "Identifier": "15",
+      "Position": "1020,-240",
+      "A": {
+        "Identifier": "17",
+        "Output": "Result"
+      },
+      "D": {
+        "Identifier": "8",
+        "Output": "X"
+      },
+      "E": {
+        "Identifier": "8",
+        "Output": "Y"
+      }
+    },
+    {
+      "_class": "Lerp",
+      "Fraction": 0.5,
+      "Identifier": "16",
+      "Position": "1344,-312",
+      "A": {
+        "Identifier": "9",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "14",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "15",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Lerp",
+      "Fraction": 0.25323752,
+      "Identifier": "17",
+      "Position": "792,-336",
+      "A": {
+        "Identifier": "6",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    }
+  ]
+}

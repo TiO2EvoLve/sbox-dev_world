@@ -1,0 +1,12 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shadergraphs/simpletoon.shader"
+
+	Color "models/brother/texture/hair_shadow.jpg"
+	g_flbrightness "0.990"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+}

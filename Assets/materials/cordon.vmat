@@ -1,0 +1,16 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shadergraphs/cordonline.shader"
+
+	g_fldecal "0.763"
+	g_flMetal "0.763"
+	g_flratio "0.500"
+	g_vColorA "[0.149020 0.078431 0.000000 1.000000]"
+	g_vColorB "[0.858824 0.239216 0.000000 1.000000]"
+	g_vController "[11.700 10.000]"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+}

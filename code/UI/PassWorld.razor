@@ -1,0 +1,111 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+
+	<div class="top">
+		<div class="top-cross">@num1</div>
+		<div class="top-cross">@num2</div>
+		<div class="top-cross">@num3</div>
+		<div class="top-cross">@num4</div>
+	</div>
+	<div class="input-box">
+
+		<div class="input-cross">
+			<div class="input-item" onclick=@(() => InputValue( 1 ))> 1 </div>
+			<div class="input-item" onclick=@(() => InputValue( 2 ))> 2 </div>
+			<div class="input-item" onclick=@(() => InputValue( 3 ))> 3 </div>
+		</div>
+
+		<div class="input-cross">
+			<div class="input-item" onclick=@(() => InputValue( 4 ))> 4 </div>
+			<div class="input-item" onclick=@(() => InputValue( 5 ))> 5 </div>
+			<div class="input-item" onclick=@(() => InputValue( 6 ))> 6 </div>
+		</div>
+
+		<div class="input-cross">
+			<div class="input-item" onclick=@(() => InputValue( 7 ))> 7 </div>
+			<div class="input-item" onclick=@(() => InputValue( 8 ))> 8 </div>
+			<div class="input-item" onclick=@(() => InputValue( 9 ))> 9 </div>
+		</div>
+
+		<div class="input-cross">
+			<div class="input-item" onclick=@ClearValue> ✖️ </div>
+			<div class="input-item" onclick=@(() => InputValue( 0 ))> 0 </div>
+			<div class="input-item" onclick=@Submit> ✔️ </div>
+		</div>
+
+
+	</div>
+
+</root>
+
+@code
+{
+	int sum = 1;
+	int num1 = 0;
+	int num2 = 0;
+	int num3 = 0;
+	int num4 = 0;
+
+	public string passworld = "1234";
+	
+	
+	[Property] public GameObject obj;
+	[Property] public SoundEvent InputSound;
+	[Property] public SoundEvent SuccessSound;
+	[Property] public SoundEvent FailSound;
+	void InputValue(int Value)
+	{
+		if ( sum == 5 ) return;
+		if(InputSound is not null) Sound.Play( InputSound ,Transform.Position );
+		if ( sum == 1 )
+		{
+			num1 = Value;
+			sum++;
+		}
+		else if(sum ==2)
+		{
+			num2 = Value;
+			sum++;
+		}
+		else if(sum ==3)
+		{
+			num3 = Value;
+			sum++;
+		}
+		else if(sum == 4)
+		{
+			num4 = Value;
+			sum++;
+		}
+	}
+
+	void ClearValue()
+	{
+		
+		num1 = 0;
+		num2 = 0;
+		num3 = 0;
+		num4 = 0;
+		sum = 1;
+	}
+
+	void Submit()
+	{
+		
+		if ( passworld.Equals( num1.ToString() + num2.ToString() + num3.ToString() + num4.ToString() + "" ) )
+		{
+			if(SuccessSound is not null)Sound.Play( SuccessSound,Transform.Position  );
+			obj.Destroy();
+		}
+		else
+		{
+			if(FailSound  is not null) Sound.Play( FailSound,Transform.Position  );
+		}
+		ClearValue();
+	}
+
+	protected override int BuildHash() => System.HashCode.Combine( num1,num2,num3,num4 );
+}

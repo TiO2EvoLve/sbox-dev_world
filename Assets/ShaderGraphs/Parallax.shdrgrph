@@ -1,0 +1,379 @@
+{
+  "Model": "models/dev/plane.vmdl",
+  "Description": "",
+  "BlendMode": "Masked",
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "1424,-64",
+      "Albedo": {
+        "Identifier": "5",
+        "Output": "Result"
+      },
+      "Emission": {
+        "Identifier": "17",
+        "Output": "Result"
+      },
+      "Opacity": {
+        "Identifier": "18",
+        "Output": "Result"
+      },
+      "Normal": {
+        "Identifier": "14",
+        "Output": "Result"
+      },
+      "Roughness": {
+        "Identifier": "16",
+        "Output": "Result"
+      },
+      "Metalness": {
+        "Identifier": "15",
+        "Output": "Result"
+      },
+      "AmbientOcclusion": {
+        "Identifier": "19",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Subtract",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "1",
+      "Position": "448,-80",
+      "A": {
+        "Identifier": "13",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "8",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 10,
+      "Value": 3.496268,
+      "Name": "depth",
+      "IsAttribute": false,
+      "UI": {
+        "PrimaryGroup": {
+          "Name": ""
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "2",
+      "Position": "-128,-16"
+    },
+    {
+      "_class": "TileAndOffset",
+      "DefaultTile": "1,1",
+      "DefaultOffset": "0,0",
+      "WrapTo01": false,
+      "Identifier": "3",
+      "Position": "784,-128",
+      "Coords": {
+        "Identifier": "1",
+        "Output": "Result"
+      },
+      "Tile": {
+        "Identifier": "10",
+        "Output": "Result"
+      },
+      "Offset": {
+        "Identifier": "11",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "ViewDirection",
+      "Identifier": "4",
+      "Position": "-464,96"
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/orange/texture_09.png",
+      "Sampler": {},
+      "UI": {
+        "Name": "Color",
+        "Default": "1,1,1,1",
+        "CustomExtension": "",
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": ""
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "5",
+      "Position": "1072,-160",
+      "Coords": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "SplitVector",
+      "Identifier": "6",
+      "Position": "-32,176",
+      "Input": {
+        "Identifier": "12",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Divide",
+      "DefaultA": 3.15,
+      "DefaultB": 1,
+      "Identifier": "7",
+      "Position": "208,176",
+      "A": {
+        "Identifier": "2",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "6",
+        "Output": "Z"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "8",
+      "Position": "304,80",
+      "A": {
+        "Identifier": "12",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "ObjectSpaceNormal",
+      "Identifier": "9",
+      "Position": "-304,-128"
+    },
+    {
+      "_class": "Float2",
+      "Min": "0,0",
+      "Max": "10,10",
+      "Value": "1,1",
+      "Name": "Tile",
+      "IsAttribute": false,
+      "UI": {
+        "PrimaryGroup": {
+          "Name": ""
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "10",
+      "Position": "560,0"
+    },
+    {
+      "_class": "Float2",
+      "Min": "0,0",
+      "Max": "10,10",
+      "Value": "0,0",
+      "Name": "Offset",
+      "IsAttribute": false,
+      "UI": {
+        "PrimaryGroup": {
+          "Name": ""
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "11",
+      "Position": "560,128"
+    },
+    {
+      "_class": "TransformNormal",
+      "InputSpace": "World",
+      "OutputSpace": "Tangent",
+      "DecodeNormal": false,
+      "Identifier": "12",
+      "Position": "-256,80",
+      "Input": {
+        "Identifier": "4",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TransformNormal",
+      "InputSpace": "World",
+      "OutputSpace": "Tangent",
+      "DecodeNormal": false,
+      "Identifier": "13",
+      "Position": "-96,-144",
+      "Input": {
+        "Identifier": "9",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/orange/texture_09.png",
+      "Sampler": {},
+      "UI": {
+        "Name": "Normal",
+        "Default": "1,1,1,1",
+        "Extension": "Normal",
+        "CustomExtension": "",
+        "SrgbRead": true,
+        "Priority": 1,
+        "PrimaryGroup": {
+          "Name": ""
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "14",
+      "Position": "1072,432",
+      "Coords": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/orange/texture_09.png",
+      "Sampler": {},
+      "UI": {
+        "Name": "Metal",
+        "Default": "1,1,1,1",
+        "Extension": "Metal",
+        "CustomExtension": "",
+        "SrgbRead": true,
+        "Priority": 3,
+        "PrimaryGroup": {
+          "Name": ""
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "15",
+      "Position": "1072,832",
+      "Coords": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/orange/texture_09.png",
+      "Sampler": {},
+      "UI": {
+        "Name": "Rough",
+        "Default": "1,1,1,1",
+        "Extension": "Rough",
+        "CustomExtension": "",
+        "SrgbRead": true,
+        "Priority": 2,
+        "PrimaryGroup": {
+          "Name": ""
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "16",
+      "Position": "1072,624",
+      "Coords": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/orange/texture_09.png",
+      "Sampler": {},
+      "UI": {
+        "Name": "Emission",
+        "Default": "1,1,1,1",
+        "Extension": "SelfIllum",
+        "CustomExtension": "",
+        "SrgbRead": true,
+        "Priority": 6,
+        "PrimaryGroup": {
+          "Name": ""
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "17",
+      "Position": "1072,48",
+      "Coords": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/orange/texture_09.png",
+      "Sampler": {},
+      "UI": {
+        "Name": "Opacity",
+        "Default": "1,1,1,1",
+        "Extension": "Trans",
+        "CustomExtension": "",
+        "SrgbRead": true,
+        "Priority": 5,
+        "PrimaryGroup": {
+          "Name": ""
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "18",
+      "Position": "1072,240",
+      "Coords": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/dev/orange/texture_09.png",
+      "Sampler": {},
+      "UI": {
+        "Name": "AO",
+        "Default": "1,1,1,1",
+        "Extension": "AO",
+        "CustomExtension": "",
+        "SrgbRead": true,
+        "Priority": 4,
+        "PrimaryGroup": {
+          "Name": ""
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "19",
+      "Position": "1072,1024",
+      "Coords": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shadergraphs/simpletoon.shader"
+
+	Color "models/brother/texture/body_shadow.jpg"
+	g_flbrightness "1.000"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+}

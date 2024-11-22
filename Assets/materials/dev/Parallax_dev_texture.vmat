@@ -1,0 +1,24 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shadergraphs/parallax.shader"
+
+	AO "materials/default/default_ao.tga"
+	Color "materials/dev/texture_06.png"
+	Emission "materials/default/default_selfillum.tga"
+	g_fldepth "4.071"
+	g_vOffset "[0.000 0.000]"
+	g_vTile "[1.000 1.000]"
+	Metal "materials/default/default_metal.tga"
+	Normal "materials/default/default_normal.tga"
+	Opacity "materials/default/default_trans.tga"
+	Rough "materials/default/default_rough.tga"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Translucent ----
+	g_flAlphaTestReference "0.500"
+	g_flAntiAliasedEdgeStrength "1.000"
+}
