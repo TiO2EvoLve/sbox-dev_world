@@ -33,13 +33,15 @@ public sealed class Weapon : Component
     	public SkinnedModelRenderer BodyRenderer { get; set; }
     
     	float ironsights;
-    
-    	protected override void OnUpdate()
-    	{
-    		PositionViewmodel();
-    
-    		AnimationThink();
-    	}
+
+
+	    protected override void OnUpdate()
+	    {
+		   PositionViewmodel();
+		   AnimationThink();
+	    }
+
+	   
     
     	Rotation lastRot;
     
@@ -82,7 +84,6 @@ public sealed class Weapon : Component
     	protected override void OnEnabled()
     	{
     		base.OnEnabled();
-    
     		CreateViewmodel();
     	}
     
@@ -93,26 +94,30 @@ public sealed class Weapon : Component
     		viewmodel?.Destroy();
     		worldmodel?.Destroy();
     	}
-    
+
+	    [Property] private bool isgun;
     	protected override void OnFixedUpdate()
     	{
-    		if ( Input.Down( "attack1" ) )
-    		{
-    			RunAttack();
-    		}
+		    
+			    if ( Input.Down( "attack1" ) )
+			    {
+				    RunAttack();
+			    }
     
-    		if ( Input.Down( "reload" ) )
-    		{
-    			if ( viewmodel.Components.TryGet<SkinnedModelRenderer>( out var vm ) )
-    			{
-    				vm.Set( "b_reload", true );
-    			}
-    		}
+			    if ( Input.Down( "reload" ) )
+			    {
+				    if ( viewmodel.Components.TryGet<SkinnedModelRenderer>( out var vm ) )
+				    {
+					    vm.Set( "b_reload", true );
+				    }
+			    }
     
-    		if ( Input.Down( "attack2" ) )
-    		{
-    			RunAltAttack();
-    		}
+			    if ( Input.Down( "attack2" ) )
+			    {
+				    RunAltAttack();
+			    } 
+		    
+    		
     	}
     
     	TimeSince timeSinceLastShoot = 0.0f;
@@ -128,20 +133,27 @@ public sealed class Weapon : Component
     		timeSinceLastShoot = 0;
     
     		Vector3 shootPosition = Transform.Position;
-    
+
+		    	
     		if ( viewmodel.Components.TryGet<SkinnedModelRenderer>( out var vm ) )
     		{
+			    if ( !isgun )
+			    {
+				    vm.Set( "b_attack", true );
+				    ShootBullet(150);
+				    return;
+			    }
     			vm.Set( "b_attack", true );
-    
+				
     			var muzzle = vm.GetBoneObject( vm.Model.Bones.GetBone( "muzzle" ) ) ?? vm.GameObject;
-    
+				
     			shootPosition = muzzle.Transform.Position;
     			GameObject.Clone( "/effects/muzzle.prefab", global::Transform.Zero, muzzle );
     		}
     
     		Sound.Play( PrimaryAttackSound, shootPosition );
     
-    		ShootBullet();
+    		ShootBullet(4096);
     
     	}
     
@@ -149,12 +161,12 @@ public sealed class Weapon : Component
     	{
     	}
     
-    	void ShootBullet()
+    	void ShootBullet(int distance)
     	{
     		var ray = Scene.Camera.Transform.World.ForwardRay;
     		ray.Forward += Vector3.Random * 0.01f;
     
-    		var tr = Scene.Trace.Ray( ray, 4096 )
+    		var tr = Scene.Trace.Ray( ray, distance )
     					.IgnoreGameObjectHierarchy( GameObject.Parent )
     					.Run();
     
@@ -162,8 +174,8 @@ public sealed class Weapon : Component
     
     		if ( !tr.Hit || tr.GameObject is null )
     			return;
-    
-    		GameObject.Clone( "/effects/impact_default.prefab", new Transform( tr.HitPosition + tr.Normal * 2.0f, Rotation.LookAt( tr.Normal ) ) );
+			
+    		 GameObject.Clone( "/effects/impact_default.prefab", new Transform( tr.HitPosition + tr.Normal * 2.0f, Rotation.LookAt( tr.Normal ) ) );
     
     		{
     			var go = GameObject.Clone( "/effects/decal_bullet_default.prefab" );

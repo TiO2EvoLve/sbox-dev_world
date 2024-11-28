@@ -1,0 +1,29 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shadergraphs/snowblend.shader"
+
+	//---- Blending ----
+	F_ADDITIVE_BLEND 1
+
+	g_flSnowDensity "8.009"
+	g_flSnowSize "0.876"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Texture A ----
+	AoA "models/sand_rocks/textures/sand_rocks_small_01_ao_1k.png"
+	ColorA "models/sand_rocks/textures/sand_rocks_small_01_diff_1k.png"
+	MetalA "[0.000000 0.000000 0.000000 0.000000]"
+	NormalA "models/sand_rocks/textures/sand_rocks_small_01_nor_gl_1k.png"
+	RoughA "models/sand_rocks/textures/sand_rocks_small_01_rough_1k.png"
+
+	//---- Texture B ----
+	AoB "materials/snow/Snow010A_2K-PNG_AmbientOcclusion.png"
+	ColorB "materials/snow/Snow010A_2K-PNG_Color.png"
+	MetalB "[0.000000 0.000000 0.000000 0.000000]"
+	NormalB "materials/snow/Snow010A_2K-PNG_NormalGL.png"
+	RoughB "materials/snow/snow010a_2k-png_roughness.png"
+}

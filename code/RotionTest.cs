@@ -8,6 +8,6 @@ public sealed class RotionTest : Component
 	
 	protected override void OnUpdate()
 	{
-		Transform.Rotation = Transform.Rotation.RotateAroundAxis( Axis, Speed);
+		WorldRotation = WorldRotation.RotateAroundAxis( Axis, Speed);
 	}
 }

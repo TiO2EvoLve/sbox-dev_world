@@ -13,7 +13,7 @@ public sealed class Portal : Component,Component.ITriggerListener
 
 		if ( tag.Has( "player" ) )
 		{
-			other.GameObject.Root.Transform.Position = target.Transform.Position;
+			other.GameObject.Root.WorldPosition = target.WorldPosition;
 		}
 		
 	

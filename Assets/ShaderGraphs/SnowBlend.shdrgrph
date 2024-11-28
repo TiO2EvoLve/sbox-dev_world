@@ -1,0 +1,476 @@
+{
+  "Model": null,
+  "Description": null,
+  "BlendMode": "Opaque",
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "1488,-12",
+      "Albedo": {
+        "Identifier": "26",
+        "Output": "Result"
+      },
+      "Normal": {
+        "Identifier": "8",
+        "Output": "Result"
+      },
+      "Roughness": {
+        "Identifier": "15",
+        "Output": "Result"
+      },
+      "Metalness": {
+        "Identifier": "17",
+        "Output": "Result"
+      },
+      "AmbientOcclusion": {
+        "Identifier": "16",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "WorldNormal",
+      "Identifier": "1",
+      "Position": "-480,108"
+    },
+    {
+      "_class": "Float3",
+      "Min": "0,0,0",
+      "Max": "1,1,1",
+      "Value": "0,0,1",
+      "Name": "",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "2",
+      "Position": "-492,-72"
+    },
+    {
+      "_class": "DotProduct",
+      "Identifier": "3",
+      "Position": "-120,12",
+      "InputA": {
+        "Identifier": "2",
+        "Output": "Result"
+      },
+      "InputB": {
+        "Identifier": "1",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Subtract",
+      "DefaultA": 0,
+      "DefaultB": 0.06666648,
+      "Identifier": "4",
+      "Position": "96,12",
+      "A": {
+        "Identifier": "3",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 3.2666545,
+      "Identifier": "5",
+      "Position": "300,12",
+      "A": {
+        "Identifier": "4",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 1,
+      "Value": 0.5,
+      "Name": "SnowSize",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Slider",
+        "Priority": 1
+      },
+      "Identifier": "6",
+      "Position": "-120,108"
+    },
+    {
+      "_class": "Float",
+      "Min": 1,
+      "Max": 100,
+      "Value": 12.255959,
+      "Name": "SnowDensity",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Slider",
+        "Priority": 1
+      },
+      "Identifier": "7",
+      "Position": "84,108"
+    },
+    {
+      "_class": "Lerp",
+      "Fraction": 0.5,
+      "Identifier": "8",
+      "Position": "1236,0",
+      "A": {
+        "Identifier": "11",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "21",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "25",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "models/sand_rocks/textures/sand_rocks_small_01_diff_1k.png",
+      "Sampler": {},
+      "UI": {
+        "Name": "ColorA",
+        "Default": "1,1,1,1",
+        "ShowExtension": true,
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Texture A"
+        }
+      },
+      "Identifier": "9",
+      "Position": "588,12",
+      "Coords": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "10",
+      "Position": "288,396"
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": null,
+      "Sampler": {},
+      "UI": {
+        "Name": "NormalA",
+        "Default": "1,1,1,1",
+        "Extension": "Normal",
+        "ShowExtension": true,
+        "SrgbRead": true,
+        "Priority": 1,
+        "PrimaryGroup": {
+          "Name": "Texture A"
+        }
+      },
+      "Identifier": "11",
+      "Position": "588,204",
+      "Coords": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": null,
+      "Sampler": {},
+      "UI": {
+        "Name": "RoughA",
+        "Default": "1,1,1,1",
+        "Extension": "Rough",
+        "ShowExtension": true,
+        "SrgbRead": true,
+        "Priority": 2,
+        "PrimaryGroup": {
+          "Name": "Texture A"
+        }
+      },
+      "Identifier": "12",
+      "Position": "588,396",
+      "Coords": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": null,
+      "Sampler": {},
+      "UI": {
+        "Name": "AoA",
+        "Default": "1,1,1,1",
+        "Extension": "AO",
+        "ShowExtension": true,
+        "SrgbRead": true,
+        "Priority": 3,
+        "PrimaryGroup": {
+          "Name": "Texture A"
+        }
+      },
+      "Identifier": "13",
+      "Position": "588,576",
+      "Coords": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": null,
+      "Sampler": {},
+      "UI": {
+        "Name": "MetalA",
+        "Default": "1,1,1,1",
+        "Extension": "Metal",
+        "ShowExtension": true,
+        "SrgbRead": true,
+        "Priority": 4,
+        "PrimaryGroup": {
+          "Name": "Texture A"
+        }
+      },
+      "Identifier": "14",
+      "Position": "588,756",
+      "Coords": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Lerp",
+      "Fraction": 0.5,
+      "Identifier": "15",
+      "Position": "1236,120",
+      "A": {
+        "Identifier": "12",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "22",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "25",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Lerp",
+      "Fraction": 0.5,
+      "Identifier": "16",
+      "Position": "1236,228",
+      "A": {
+        "Identifier": "13",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "19",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "25",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Lerp",
+      "Fraction": 0.5,
+      "Identifier": "17",
+      "Position": "1236,348",
+      "A": {
+        "Identifier": "14",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "18",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "25",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": null,
+      "Sampler": {},
+      "UI": {
+        "Name": "MetalB",
+        "Default": "1,1,1,1",
+        "Extension": "Metal",
+        "ShowExtension": true,
+        "SrgbRead": true,
+        "Priority": 4,
+        "PrimaryGroup": {
+          "Name": "Texture B"
+        }
+      },
+      "Identifier": "18",
+      "Position": "864,756",
+      "Coords": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": null,
+      "Sampler": {},
+      "UI": {
+        "Name": "AoB",
+        "Default": "1,1,1,1",
+        "Extension": "AO",
+        "ShowExtension": true,
+        "SrgbRead": true,
+        "Priority": 3,
+        "PrimaryGroup": {
+          "Name": "Texture B"
+        }
+      },
+      "Identifier": "19",
+      "Position": "864,576",
+      "Coords": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/snow/snow010a_2k-png_color.png",
+      "Sampler": {},
+      "UI": {
+        "Name": "ColorB",
+        "Default": "1,1,1,1",
+        "ShowExtension": true,
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Texture B",
+          "Priority": 1
+        }
+      },
+      "Identifier": "20",
+      "Position": "864,12",
+      "Coords": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": null,
+      "Sampler": {},
+      "UI": {
+        "Name": "NormalB",
+        "Default": "1,1,1,1",
+        "Extension": "Normal",
+        "ShowExtension": true,
+        "SrgbRead": true,
+        "Priority": 1,
+        "PrimaryGroup": {
+          "Name": "Texture B"
+        }
+      },
+      "Identifier": "21",
+      "Position": "864,204",
+      "Coords": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": null,
+      "Sampler": {},
+      "UI": {
+        "Name": "RoughB",
+        "Default": "1,1,1,1",
+        "Extension": "Rough",
+        "ShowExtension": true,
+        "SrgbRead": true,
+        "Priority": 2,
+        "PrimaryGroup": {
+          "Name": "Texture B"
+        }
+      },
+      "Identifier": "22",
+      "Position": "864,396",
+      "Coords": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "220,1016",
+      "Color": "Green",
+      "Title": "Texture A",
+      "Description": "",
+      "Layer": 2,
+      "Identifier": "23",
+      "Position": "552,-60"
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "220,1016",
+      "Color": "Green",
+      "Title": "Texture B",
+      "Description": "",
+      "Layer": 1,
+      "Identifier": "24",
+      "Position": "828,-60"
+    },
+    {
+      "_class": "Reroute",
+      "Comment": null,
+      "Identifier": "25",
+      "Position": "1104,252",
+      "Input": {
+        "Identifier": "27",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Lerp",
+      "Fraction": 0.5,
+      "Identifier": "26",
+      "Position": "1236,-120",
+      "A": {
+        "Identifier": "9",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "20",
+        "Output": "Result"
+      },
+      "C": {
+        "Identifier": "25",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Saturate",
+      "Identifier": "27",
+      "Position": "396,84",
+      "Input": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    }
+  ]
+}

@@ -1,57 +1,57 @@
-HealthBar
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	justify-content: flex-start;
-	align-items: flex-end;
-	
-	.box{
-		position: absolute;
-		left: 3%;
-		bottom: 3%;
-		width: 20%;
-		height: 100px;
-		justify-content: flex-start;
-		align-items: center;
-	}
-	
-	img{
-		height: 100px;
-		width: 100px;
-		
-	}
-	
-	.Name{
-		justify-content: center;
-		align-items: center;
-		height: 100%;
-		width: 300px;
-		font-size: 40px;
-		font-family: Poppins, serif;
-		color: #000000;
-		
-		background-color: rgba(255, 255, 255, 0.1);
-		border: 2px solid rgba(255, 255, 255, 0.5);
-		border-radius: 0 30px 30px 0;
-		backdrop-filter: blur(10px);
-	}
-	.text{
-		
-		position: absolute;
-		justify-content: center;
-		text-align: center; 
-		flex: 1; 
-		z-index: 10;
-	}
-	.fill {
-		height: 100%;
-		width: 100px;
-		opacity: 0.7;
-		border-radius: 0 30px 30px 0;
-		border: 2px solid rgba(255, 255, 255, 0.5);
-	}
+HealthBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: flex-start;
+    align-items: flex-end;
 
+    .box {
+        position: absolute;
+        left: 3%;
+        bottom: 3%;
+        width: 20%;
+        height: 100px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .Name {
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        width: 300px;
+        font-size: 40px;
+        font-family: Poppins, serif;
+        color: #000000;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 0 30px 30px 0;
+        backdrop-filter: blur(10px);
+    }
+
+    .text {
+        position: absolute;
+        justify-content: center;
+        text-align: center;
+        z-index: 10;
+        margin-left: 20px;
+        color: #FFF;
+        font-weight: bold;
+    }
+
+    .fill {
+        height: 100%;
+        width: 100px;
+        opacity: 0.7;
+        border-radius: 0 30px 30px 0;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        justify-content: center;
+    }
 }

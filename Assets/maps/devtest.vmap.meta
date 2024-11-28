@@ -11,8 +11,10 @@
       "Resources": null,
       "PackageReferences": [],
       "EditorReferences": [
+        "facepunch.metal_trim_galvanized#43483",
         "facepunch.oil_drum#18226",
         "facepunch.oildrumexplosive#26722",
+        "rustextended.glass_tiling#43278",
         "tiowevolve.dev_dark_03#52952",
         "tiowevolve.dev_dark_13#52962",
         "tiowevolve.dev_green_02#52964",

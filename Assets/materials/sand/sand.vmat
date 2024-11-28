@@ -1,0 +1,26 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shadergraphs/snowblend.shader"
+
+	g_flSnowDensity "12.256"
+	g_flSnowSize "0.500"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Texture A ----
+	AoA "materials/sand/aerial_beach_01_ao_1k.png"
+	ColorA "materials/sand/aerial_beach_01_diff_1k.png"
+	MetalA "materials/default/default_metal.tga"
+	NormalA "materials/sand/aerial_beach_01_nor_gl_1k.png"
+	RoughA "materials/sand/aerial_beach_01_rough_1k.png"
+
+	//---- Texture B ----
+	AoB "materials/snow/Snow010A_2K-PNG_AmbientOcclusion.png"
+	ColorB "materials/snow/Snow010A_2K-PNG_Color.png"
+	MetalB "materials/default/default_metal.tga"
+	NormalB "materials/snow/Snow010A_2K-PNG_NormalGL.png"
+	RoughB "materials/snow/Snow010A_2K-PNG_Roughness.png"
+}
