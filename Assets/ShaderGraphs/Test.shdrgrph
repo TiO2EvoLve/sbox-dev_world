@@ -9,9 +9,9 @@
       "OutputSpace": "Tangent",
       "DecodeNormal": false,
       "Identifier": "0",
-      "Position": "-348,-36",
+      "Position": "-480,112",
       "Input": {
-        "Identifier": "18",
+        "Identifier": "17",
         "Output": "Result"
       }
     },
@@ -22,7 +22,7 @@
       "DefaultZ": 0,
       "DefaultW": 0,
       "Identifier": "1",
-      "Position": "-996,-624",
+      "Position": "-992,-448",
       "X": {
         "Identifier": "80",
         "Output": "Y"
@@ -39,7 +39,7 @@
     {
       "_class": "Length",
       "Identifier": "2",
-      "Position": "-1308,-420",
+      "Position": "-1440,-320",
       "Input": {
         "Identifier": "3",
         "Output": "Result"
@@ -54,12 +54,12 @@
       "IsAttribute": false,
       "UI": {},
       "Identifier": "3",
-      "Position": "-1584,-492"
+      "Position": "-1712,-368"
     },
     {
       "_class": "Length",
       "Identifier": "4",
-      "Position": "-1308,-360",
+      "Position": "-1440,-176",
       "Input": {
         "Identifier": "6",
         "Output": "Result"
@@ -71,9 +71,9 @@
       "OutputSpace": "Tangent",
       "DecodeNormal": false,
       "Identifier": "5",
-      "Position": "-1392,-624",
+      "Position": "-1424,-448",
       "Input": {
-        "Identifier": "14",
+        "Identifier": "13",
         "Output": "Result"
       }
     },
@@ -86,23 +86,14 @@
       "IsAttribute": false,
       "UI": {},
       "Identifier": "6",
-      "Position": "-1584,-360"
+      "Position": "-1712,-208"
     },
     {
       "_class": "Length",
       "Identifier": "7",
-      "Position": "-1308,-300",
+      "Position": "-1440,-32",
       "Input": {
-        "Identifier": "9",
-        "Output": "Result"
-      }
-    },
-    {
-      "_class": "Abs",
-      "Identifier": "8",
-      "Position": "2964,816",
-      "Input": {
-        "Identifier": "107",
+        "Identifier": "8",
         "Output": "Result"
       }
     },
@@ -114,8 +105,8 @@
       "Name": "",
       "IsAttribute": false,
       "UI": {},
-      "Identifier": "9",
-      "Position": "-1584,-228"
+      "Identifier": "8",
+      "Position": "-1712,-48"
     },
     {
       "_class": "CombineVector",
@@ -123,8 +114,8 @@
       "DefaultY": 0,
       "DefaultZ": 0,
       "DefaultW": 0,
-      "Identifier": "10",
-      "Position": "-1068,-384",
+      "Identifier": "9",
+      "Position": "-1200,-240",
       "X": {
         "Identifier": "2",
         "Output": "Result"
@@ -153,8 +144,8 @@
           "Name": ""
         }
       },
-      "Identifier": "11",
-      "Position": "-1272,-192"
+      "Identifier": "10",
+      "Position": "-1344,64"
     },
     {
       "_class": "CombineVector",
@@ -162,10 +153,10 @@
       "DefaultY": 1,
       "DefaultZ": 0,
       "DefaultW": 0,
-      "Identifier": "12",
-      "Position": "-1068,-240",
+      "Identifier": "11",
+      "Position": "-1104,-16",
       "Z": {
-        "Identifier": "11",
+        "Identifier": "10",
         "Output": "Result"
       }
     },
@@ -173,45 +164,45 @@
       "_class": "Multiply",
       "DefaultA": 0,
       "DefaultB": 1,
-      "Identifier": "13",
-      "Position": "-840,-300",
+      "Identifier": "12",
+      "Position": "-896,-96",
       "A": {
-        "Identifier": "10",
-        "Output": "XYZ"
+        "Identifier": "9",
+        "Output": "Vector"
       },
       "B": {
-        "Identifier": "12",
-        "Output": "XYZ"
+        "Identifier": "11",
+        "Output": "Vector"
       }
     },
     {
       "_class": "ViewDirection",
-      "Identifier": "14",
-      "Position": "-1584,-624"
+      "Identifier": "13",
+      "Position": "-1632,-512"
     },
     {
       "_class": "Multiply",
       "DefaultA": 0,
       "DefaultB": -1,
-      "Identifier": "15",
-      "Position": "-816,-600",
+      "Identifier": "14",
+      "Position": "-768,-272",
       "A": {
         "Identifier": "1",
-        "Output": "XYZ"
+        "Output": "Vector"
       }
     },
     {
       "_class": "Divide",
       "DefaultA": 0,
       "DefaultB": 1,
-      "Identifier": "16",
-      "Position": "-624,-432",
+      "Identifier": "15",
+      "Position": "-512,-256",
       "A": {
-        "Identifier": "15",
+        "Identifier": "14",
         "Output": "Result"
       },
       "B": {
-        "Identifier": "13",
+        "Identifier": "12",
         "Output": "Result"
       }
     },
@@ -219,15 +210,15 @@
       "_class": "TextureCoord",
       "UseSecondaryCoord": false,
       "Tiling": "1,1",
-      "Identifier": "17",
-      "Position": "-900,48"
+      "Identifier": "16",
+      "Position": "-1040,208"
     },
     {
       "_class": "Multiply",
       "DefaultA": 0,
       "DefaultB": 2,
-      "Identifier": "18",
-      "Position": "-468,12",
+      "Identifier": "17",
+      "Position": "-592,160",
       "A": {
         "Identifier": "27",
         "Output": "Result"
@@ -237,14 +228,14 @@
       "_class": "Add",
       "DefaultA": 0,
       "DefaultB": 1,
-      "Identifier": "19",
-      "Position": "-36,12",
+      "Identifier": "18",
+      "Position": "-160,160",
       "A": {
         "Identifier": "0",
         "Output": "Result"
       },
       "B": {
-        "Identifier": "20",
+        "Identifier": "19",
         "Output": "Result"
       }
     },
@@ -256,26 +247,41 @@
       "Name": "",
       "IsAttribute": false,
       "UI": {},
-      "Identifier": "20",
-      "Position": "-324,60"
+      "Identifier": "19",
+      "Position": "-448,208"
     },
     {
       "_class": "Divide",
-      "DefaultA": 1,
-      "DefaultB": 0,
-      "Identifier": "21",
-      "Position": "-216,-444",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "20",
+      "Position": "-256,-160",
+      "A": {
+        "Identifier": "21",
+        "Output": "Result"
+      },
       "B": {
-        "Identifier": "16",
+        "Identifier": "15",
         "Output": "Result"
       }
     },
     {
+      "_class": "Float3",
+      "Min": "0,0,0",
+      "Max": "1,1,1",
+      "Value": "1,1,1",
+      "Name": "",
+      "IsAttribute": false,
+      "UI": {},
+      "Identifier": "21",
+      "Position": "-512,-96"
+    },
+    {
       "_class": "Abs",
       "Identifier": "22",
-      "Position": "-12,-444",
+      "Position": "-96,-96",
       "Input": {
-        "Identifier": "21",
+        "Identifier": "20",
         "Output": "Result"
       }
     },
@@ -284,10 +290,14 @@
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "23",
-      "Position": "204,-396",
+      "Position": "96,-96",
       "A": {
         "Identifier": "22",
         "Output": "Result"
+      },
+      "B": {
+        "Identifier": "60",
+        "Output": "Vector"
       }
     },
     {
@@ -295,20 +305,20 @@
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "24",
-      "Position": "384,-288",
+      "Position": "256,-64",
       "A": {
         "Identifier": "23",
         "Output": "Result"
       },
       "B": {
-        "Identifier": "21",
+        "Identifier": "20",
         "Output": "Result"
       }
     },
     {
       "_class": "Abs",
       "Identifier": "25",
-      "Position": "492,-204",
+      "Position": "368,-64",
       "Input": {
         "Identifier": "24",
         "Output": "Result"
@@ -317,7 +327,7 @@
     {
       "_class": "SplitVector",
       "Identifier": "26",
-      "Position": "636,-228",
+      "Position": "512,-80",
       "Input": {
         "Identifier": "25",
         "Output": "Result"
@@ -326,9 +336,9 @@
     {
       "_class": "Frac",
       "Identifier": "27",
-      "Position": "-660,36",
+      "Position": "-784,176",
       "Input": {
-        "Identifier": "17",
+        "Identifier": "16",
         "Output": "Result"
       }
     },
@@ -337,7 +347,7 @@
       "DefaultInput": 0,
       "DefaultEdge": 0,
       "Identifier": "28",
-      "Position": "900,-276",
+      "Position": "800,-224",
       "Input": {
         "Identifier": "26",
         "Output": "Y"
@@ -352,7 +362,7 @@
       "DefaultA": 0,
       "DefaultB": 0,
       "Identifier": "29",
-      "Position": "876,-132",
+      "Position": "784,-80",
       "InputA": {
         "Identifier": "26",
         "Output": "X"
@@ -367,7 +377,7 @@
       "DefaultA": 0,
       "DefaultB": 0,
       "Identifier": "30",
-      "Position": "1056,60",
+      "Position": "960,112",
       "InputA": {
         "Identifier": "29",
         "Output": "Result"
@@ -382,9 +392,9 @@
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "31",
-      "Position": "1296,12",
+      "Position": "1200,64",
       "A": {
-        "Identifier": "16",
+        "Identifier": "15",
         "Output": "Result"
       },
       "B": {
@@ -397,10 +407,14 @@
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "32",
-      "Position": "1404,12",
+      "Position": "1312,64",
       "A": {
         "Identifier": "31",
         "Output": "Result"
+      },
+      "B": {
+        "Identifier": "60",
+        "Output": "Vector"
       }
     },
     {
@@ -408,7 +422,7 @@
       "DefaultInput": 0,
       "DefaultEdge": 0,
       "Identifier": "33",
-      "Position": "1116,-84",
+      "Position": "1024,-32",
       "Input": {
         "Identifier": "26",
         "Output": "Z"
@@ -432,7 +446,7 @@
       "DefaultA": 1,
       "DefaultB": 1,
       "Identifier": "35",
-      "Position": "1620,-468",
+      "Position": "1616,-464",
       "B": {
         "Identifier": "28",
         "Output": "Result"
@@ -443,7 +457,7 @@
       "DefaultA": 1,
       "DefaultB": 1,
       "Identifier": "36",
-      "Position": "1740,-468",
+      "Position": "1744,-464",
       "A": {
         "Identifier": "33",
         "Output": "Result"
@@ -465,14 +479,14 @@
         }
       },
       "Identifier": "37",
-      "Position": "1908,-672"
+      "Position": "1904,-672"
     },
     {
       "_class": "Step",
       "DefaultInput": 0,
       "DefaultEdge": 0,
       "Identifier": "38",
-      "Position": "1812,-252",
+      "Position": "1808,-256",
       "Edge": {
         "Identifier": "34",
         "Output": "Y"
@@ -484,7 +498,7 @@
       "BlendMode": "Mix",
       "Clamp": false,
       "Identifier": "39",
-      "Position": "1680,-60",
+      "Position": "1680,-64",
       "A": {
         "Identifier": "32",
         "Output": "Result"
@@ -506,7 +520,7 @@
         }
       },
       "Identifier": "40",
-      "Position": "1584,108"
+      "Position": "1584,112"
     },
     {
       "_class": "Float4",
@@ -520,14 +534,14 @@
         }
       },
       "Identifier": "41",
-      "Position": "1908,-516"
+      "Position": "1904,-512"
     },
     {
       "_class": "Multiply",
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "42",
-      "Position": "2220,-240",
+      "Position": "2224,-240",
       "A": {
         "Identifier": "38",
         "Output": "Result"
@@ -542,7 +556,7 @@
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "43",
-      "Position": "1872,-156",
+      "Position": "1872,-160",
       "A": {
         "Identifier": "33",
         "Output": "Result"
@@ -584,7 +598,7 @@
         }
       },
       "Identifier": "45",
-      "Position": "1860,-12"
+      "Position": "1856,-16"
     },
     {
       "_class": "Float4",
@@ -598,12 +612,12 @@
         }
       },
       "Identifier": "46",
-      "Position": "1860,144"
+      "Position": "1856,144"
     },
     {
       "_class": "DotProduct",
       "Identifier": "47",
-      "Position": "2352,-108",
+      "Position": "2352,-112",
       "InputA": {
         "Identifier": "61",
         "Output": "Result"
@@ -620,26 +634,26 @@
       "UI": {
         "Name": "Color",
         "Default": "1,1,1,1",
-        "ShowExtension": true,
         "SrgbRead": true,
         "PrimaryGroup": {
           "Name": ""
         },
         "SecondaryGroup": {
           "Name": ""
-        }
+        },
+        "CreateInput": "CreateInputTexture2D"
       },
       "Identifier": "48",
-      "Position": "5100,-432",
+      "Position": "5104,-432",
       "Coords": {
         "Identifier": "82",
-        "Output": "XY"
+        "Output": "Vector"
       }
     },
     {
       "_class": "OneMinus",
       "Identifier": "49",
-      "Position": "2556,-108",
+      "Position": "2560,-112",
       "In": {
         "Identifier": "47",
         "Output": "Result"
@@ -651,7 +665,7 @@
       "BlendMode": "Mix",
       "Clamp": true,
       "Identifier": "50",
-      "Position": "2148,-612",
+      "Position": "2144,-608",
       "A": {
         "Identifier": "37",
         "Output": "Result"
@@ -668,7 +682,7 @@
     {
       "_class": "OneMinus",
       "Identifier": "51",
-      "Position": "2508,-444",
+      "Position": "2512,-448",
       "In": {
         "Identifier": "53",
         "Output": "Result"
@@ -682,12 +696,12 @@
       "Description": "",
       "Layer": 2,
       "Identifier": "52",
-      "Position": "1548,-852"
+      "Position": "1552,-848"
     },
     {
       "_class": "DotProduct",
       "Identifier": "53",
-      "Position": "2340,-492",
+      "Position": "2336,-496",
       "InputA": {
         "Identifier": "62",
         "Output": "Result"
@@ -704,7 +718,7 @@
       "DefaultZ": 0,
       "DefaultW": 0,
       "Identifier": "54",
-      "Position": "2892,-372",
+      "Position": "2896,-368",
       "X": {
         "Identifier": "79",
         "Output": "Result"
@@ -721,8 +735,12 @@
       "DefaultMetalness": 0,
       "DefaultAmbientOcclusion": 1,
       "Identifier": "55",
-      "Position": "5412,-348",
+      "Position": "5408,-352",
       "Albedo": {
+        "Identifier": "48",
+        "Output": "Result"
+      },
+      "Emission": {
         "Identifier": "48",
         "Output": "Result"
       }
@@ -732,7 +750,7 @@
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "56",
-      "Position": "1788,-804",
+      "Position": "1792,-800",
       "A": {
         "Identifier": "39",
         "Output": "Result"
@@ -751,12 +769,12 @@
       "IsAttribute": false,
       "UI": {},
       "Identifier": "57",
-      "Position": "1572,-780"
+      "Position": "1568,-784"
     },
     {
       "_class": "SplitVector",
       "Identifier": "58",
-      "Position": "2004,-804",
+      "Position": "2000,-800",
       "Input": {
         "Identifier": "56",
         "Output": "Result"
@@ -765,9 +783,9 @@
     {
       "_class": "SplitVector",
       "Identifier": "59",
-      "Position": "60,84",
+      "Position": "-64,224",
       "Input": {
-        "Identifier": "19",
+        "Identifier": "18",
         "Output": "Result"
       }
     },
@@ -778,7 +796,7 @@
       "DefaultZ": 0,
       "DefaultW": 0,
       "Identifier": "60",
-      "Position": "252,84",
+      "Position": "128,224",
       "X": {
         "Identifier": "59",
         "Output": "Y"
@@ -798,7 +816,7 @@
       "OutputSpace": "Tangent",
       "DecodeNormal": false,
       "Identifier": "61",
-      "Position": "2304,36",
+      "Position": "2304,32",
       "Input": {
         "Identifier": "44",
         "Output": "Result"
@@ -810,7 +828,7 @@
       "OutputSpace": "Tangent",
       "DecodeNormal": false,
       "Identifier": "62",
-      "Position": "2340,-612",
+      "Position": "2336,-608",
       "Input": {
         "Identifier": "50",
         "Output": "Result"
@@ -842,7 +860,7 @@
       "BlendMode": "Mix",
       "Clamp": true,
       "Identifier": "64",
-      "Position": "3948,-528",
+      "Position": "3952,-528",
       "A": {
         "Identifier": "63",
         "Output": "Result"
@@ -882,7 +900,7 @@
       "BlendMode": "Mix",
       "Clamp": true,
       "Identifier": "66",
-      "Position": "4176,-396",
+      "Position": "4176,-400",
       "A": {
         "Identifier": "75",
         "Output": "Result"
@@ -905,7 +923,7 @@
       "Position": "3168,-576",
       "Coords": {
         "Identifier": "54",
-        "Output": "XY"
+        "Output": "Vector"
       }
     },
     {
@@ -920,7 +938,7 @@
     {
       "_class": "Saturate",
       "Identifier": "69",
-      "Position": "2460,-816",
+      "Position": "2464,-816",
       "Input": {
         "Identifier": "68",
         "Output": "Out"
@@ -932,7 +950,7 @@
       "BlendMode": "Mix",
       "Clamp": false,
       "Identifier": "70",
-      "Position": "2676,-240",
+      "Position": "2672,-240",
       "A": {
         "Identifier": "47",
         "Output": "Result"
@@ -949,7 +967,7 @@
     {
       "_class": "Saturate",
       "Identifier": "71",
-      "Position": "2388,-276",
+      "Position": "2384,-272",
       "Input": {
         "Identifier": "42",
         "Output": "Result"
@@ -961,10 +979,10 @@
       "DefaultOffset": "0.333,0",
       "WrapTo01": false,
       "Identifier": "72",
-      "Position": "3168,-324",
+      "Position": "3168,-320",
       "Coords": {
         "Identifier": "54",
-        "Output": "XY"
+        "Output": "Vector"
       }
     },
     {
@@ -973,10 +991,10 @@
       "DefaultOffset": "0.666,0.333",
       "WrapTo01": false,
       "Identifier": "73",
-      "Position": "3168,-444",
+      "Position": "3168,-448",
       "Coords": {
         "Identifier": "54",
-        "Output": "XY"
+        "Output": "Vector"
       }
     },
     {
@@ -988,7 +1006,7 @@
       "Position": "3168,-192",
       "Coords": {
         "Identifier": "54",
-        "Output": "XY"
+        "Output": "Vector"
       }
     },
     {
@@ -997,10 +1015,10 @@
       "DefaultOffset": "0.333,0.333",
       "WrapTo01": false,
       "Identifier": "75",
-      "Position": "3168,-60",
+      "Position": "3168,-64",
       "Coords": {
         "Identifier": "54",
-        "Output": "XY"
+        "Output": "Vector"
       }
     },
     {
@@ -1008,7 +1026,7 @@
       "DefaultInput": 0,
       "DefaultEdge": 0,
       "Identifier": "76",
-      "Position": "1812,-348",
+      "Position": "1808,-352",
       "Edge": {
         "Identifier": "34",
         "Output": "X"
@@ -1019,7 +1037,7 @@
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "77",
-      "Position": "2196,-384",
+      "Position": "2192,-384",
       "A": {
         "Identifier": "76",
         "Output": "Result"
@@ -1032,7 +1050,7 @@
     {
       "_class": "Saturate",
       "Identifier": "78",
-      "Position": "2304,-372",
+      "Position": "2304,-368",
       "Input": {
         "Identifier": "77",
         "Output": "Result"
@@ -1044,7 +1062,7 @@
       "BlendMode": "Mix",
       "Clamp": false,
       "Identifier": "79",
-      "Position": "2640,-492",
+      "Position": "2640,-496",
       "A": {
         "Identifier": "53",
         "Output": "Result"
@@ -1061,7 +1079,7 @@
     {
       "_class": "SplitVector",
       "Identifier": "80",
-      "Position": "-1200,-624",
+      "Position": "-1184,-448",
       "Input": {
         "Identifier": "5",
         "Output": "Result"
@@ -1070,7 +1088,7 @@
     {
       "_class": "SplitVector",
       "Identifier": "81",
-      "Position": "4596,-516",
+      "Position": "4592,-512",
       "Input": {
         "Identifier": "83",
         "Output": "Result"
@@ -1083,7 +1101,7 @@
       "DefaultZ": 0,
       "DefaultW": 0,
       "Identifier": "82",
-      "Position": "4812,-516",
+      "Position": "4816,-512",
       "X": {
         "Identifier": "81",
         "Output": "Y"
@@ -1096,7 +1114,7 @@
     {
       "_class": "Frac",
       "Identifier": "83",
-      "Position": "4428,-348",
+      "Position": "4432,-352",
       "Input": {
         "Identifier": "66",
         "Output": "Result"
@@ -1110,14 +1128,14 @@
       "Description": "",
       "Layer": 1,
       "Identifier": "84",
-      "Position": "1500,480"
+      "Position": "1472,448"
     },
     {
       "_class": "SplitVector",
       "Identifier": "85",
-      "Position": "1872,660",
+      "Position": "1840,624",
       "Input": {
-        "Identifier": "16",
+        "Identifier": "15",
         "Output": "Result"
       }
     },
@@ -1126,7 +1144,7 @@
       "DefaultA": -1,
       "DefaultB": 1,
       "Identifier": "86",
-      "Position": "2064,672",
+      "Position": "2032,640",
       "B": {
         "Identifier": "85",
         "Output": "Z"
@@ -1139,7 +1157,7 @@
       "DefaultZ": 0,
       "DefaultW": 0,
       "Identifier": "87",
-      "Position": "2196,660",
+      "Position": "2160,608",
       "X": {
         "Identifier": "86",
         "Output": "Result"
@@ -1154,10 +1172,14 @@
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "88",
-      "Position": "2412,624",
+      "Position": "2384,592",
       "A": {
-        "Identifier": "16",
+        "Identifier": "15",
         "Output": "Result"
+      },
+      "B": {
+        "Identifier": "87",
+        "Output": "Vector"
       }
     },
     {
@@ -1169,7 +1191,7 @@
       "IsAttribute": false,
       "UI": {},
       "Identifier": "89",
-      "Position": "1548,804"
+      "Position": "1520,768"
     },
     {
       "_class": "Float3",
@@ -1180,7 +1202,7 @@
       "IsAttribute": false,
       "UI": {},
       "Identifier": "90",
-      "Position": "1548,948"
+      "Position": "1520,912"
     },
     {
       "_class": "Float3",
@@ -1191,12 +1213,12 @@
       "IsAttribute": false,
       "UI": {},
       "Identifier": "91",
-      "Position": "1548,1092"
+      "Position": "1520,1056"
     },
     {
       "_class": "SplitVector",
       "Identifier": "92",
-      "Position": "1872,852",
+      "Position": "1840,816",
       "Input": {
         "Identifier": "89",
         "Output": "Result"
@@ -1205,7 +1227,7 @@
     {
       "_class": "SplitVector",
       "Identifier": "93",
-      "Position": "1872,996",
+      "Position": "1840,960",
       "Input": {
         "Identifier": "90",
         "Output": "Result"
@@ -1214,7 +1236,7 @@
     {
       "_class": "SplitVector",
       "Identifier": "94",
-      "Position": "1872,1140",
+      "Position": "1840,1104",
       "Input": {
         "Identifier": "91",
         "Output": "Result"
@@ -1225,7 +1247,7 @@
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "95",
-      "Position": "1908,1296",
+      "Position": "1872,1264",
       "A": {
         "Identifier": "89",
         "Output": "Result"
@@ -1240,7 +1262,7 @@
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "96",
-      "Position": "1908,1404",
+      "Position": "1872,1376",
       "A": {
         "Identifier": "90",
         "Output": "Result"
@@ -1255,7 +1277,7 @@
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "97",
-      "Position": "1908,1524",
+      "Position": "1872,1488",
       "A": {
         "Identifier": "91",
         "Output": "Result"
@@ -1274,14 +1296,14 @@
       "IsAttribute": false,
       "UI": {},
       "Identifier": "98",
-      "Position": "1596,1356"
+      "Position": "1568,1328"
     },
     {
       "_class": "Multiply",
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "99",
-      "Position": "2580,636",
+      "Position": "2544,608",
       "A": {
         "Identifier": "88",
         "Output": "Result"
@@ -1294,7 +1316,7 @@
     {
       "_class": "Saturate",
       "Identifier": "100",
-      "Position": "2076,852",
+      "Position": "2064,816",
       "Input": {
         "Identifier": "92",
         "Output": "Z"
@@ -1303,7 +1325,7 @@
     {
       "_class": "Saturate",
       "Identifier": "101",
-      "Position": "2076,1020",
+      "Position": "2032,992",
       "Input": {
         "Identifier": "93",
         "Output": "Z"
@@ -1312,7 +1334,7 @@
     {
       "_class": "Saturate",
       "Identifier": "102",
-      "Position": "2076,1152",
+      "Position": "2032,1120",
       "Input": {
         "Identifier": "94",
         "Output": "Z"
@@ -1323,7 +1345,7 @@
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "103",
-      "Position": "2592,948",
+      "Position": "2528,736",
       "A": {
         "Identifier": "88",
         "Output": "Result"
@@ -1338,7 +1360,7 @@
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "104",
-      "Position": "2580,1104",
+      "Position": "2528,832",
       "A": {
         "Identifier": "88",
         "Output": "Result"
@@ -1351,9 +1373,13 @@
     {
       "_class": "Add",
       "DefaultA": 0,
-      "DefaultB": 0,
+      "DefaultB": 1,
       "Identifier": "105",
-      "Position": "2724,540",
+      "Position": "2688,512",
+      "A": {
+        "Identifier": "114",
+        "Output": "Vector"
+      },
       "B": {
         "Identifier": "99",
         "Output": "Result"
@@ -1364,7 +1390,11 @@
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "106",
-      "Position": "3132,516",
+      "Position": "3040,496",
+      "A": {
+        "Identifier": "105",
+        "Output": "Result"
+      },
       "B": {
         "Identifier": "95",
         "Output": "Result"
@@ -1376,7 +1406,7 @@
       "BlendMode": "LinearLight",
       "Clamp": false,
       "Identifier": "107",
-      "Position": "2928,612",
+      "Position": "2912,608",
       "A": {
         "Identifier": "108",
         "Output": "Result"
@@ -1398,7 +1428,7 @@
         }
       },
       "Identifier": "108",
-      "Position": "2700,720"
+      "Position": "2672,688"
     },
     {
       "_class": "Blend",
@@ -1406,7 +1436,7 @@
       "BlendMode": "LinearLight",
       "Clamp": false,
       "Identifier": "109",
-      "Position": "3276,624",
+      "Position": "3168,624",
       "A": {
         "Identifier": "108",
         "Output": "Result"
@@ -1417,17 +1447,18 @@
       }
     },
     {
-      "_class": "TransformNormal",
-      "InputSpace": "Tangent",
-      "OutputSpace": "Tangent",
-      "DecodeNormal": false,
+      "_class": "Abs",
       "Identifier": "110",
-      "Position": "2832,540"
+      "Position": "2944,752",
+      "Input": {
+        "Identifier": "107",
+        "Output": "Result"
+      }
     },
     {
       "_class": "Abs",
       "Identifier": "111",
-      "Position": "3300,756",
+      "Position": "3424,688",
       "Input": {
         "Identifier": "109",
         "Output": "Result"
@@ -1435,19 +1466,15 @@
     },
     {
       "_class": "Step",
-      "DefaultInput": 0,
-      "DefaultEdge": 0,
+      "DefaultInput": -0.1,
+      "DefaultEdge": 1,
       "Identifier": "112",
-      "Position": "3492,396",
-      "Input": {
-        "Identifier": "115",
-        "Output": "X"
-      }
+      "Position": "2912,864"
     },
     {
       "_class": "SplitVector",
       "Identifier": "113",
-      "Position": "-348,252",
+      "Position": "-480,400",
       "Input": {
         "Identifier": "27",
         "Output": "Result"
@@ -1460,7 +1487,7 @@
       "DefaultZ": 0,
       "DefaultW": 0,
       "Identifier": "114",
-      "Position": "-156,252",
+      "Position": "-288,400",
       "X": {
         "Identifier": "113",
         "Output": "Y"
@@ -1472,15 +1499,6 @@
       "Z": {
         "Identifier": "113",
         "Output": "Z"
-      }
-    },
-    {
-      "_class": "SplitVector",
-      "Identifier": "115",
-      "Position": "3252,384",
-      "Input": {
-        "Identifier": "8",
-        "Output": "Result"
       }
     }
   ]
