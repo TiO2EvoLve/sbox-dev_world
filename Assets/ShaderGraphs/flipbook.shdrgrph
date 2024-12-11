@@ -1,0 +1,256 @@
+{
+  "Model": "models/dev/plane.vmdl",
+  "Description": "",
+  "BlendMode": "Opaque",
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "432,-120",
+      "Albedo": {
+        "Identifier": "17",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 1,
+      "Max": 20,
+      "Value": 4,
+      "Name": "Row",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Slider",
+        "Step": 1,
+        "PrimaryGroup": {
+          "Name": "Controller"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "1",
+      "Position": "-1044,-144"
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "2",
+      "Position": "-444,-312"
+    },
+    {
+      "_class": "Float",
+      "Min": 1,
+      "Max": 10,
+      "Value": 1,
+      "Name": "Tiles",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Slider",
+        "Step": 1,
+        "PrimaryGroup": {
+          "Name": "Controller"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "3",
+      "Position": "-432,-228"
+    },
+    {
+      "_class": "Divide",
+      "DefaultA": 1,
+      "DefaultB": 0,
+      "Identifier": "4",
+      "Position": "-528,-84",
+      "B": {
+        "Identifier": "1",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Time",
+      "Identifier": "5",
+      "Position": "-1044,-36"
+    },
+    {
+      "_class": "Floor",
+      "Identifier": "6",
+      "Position": "-708,-36",
+      "Input": {
+        "Identifier": "7",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "7",
+      "Position": "-840,-36",
+      "A": {
+        "Identifier": "5",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "15",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "8",
+      "Position": "-264,-96",
+      "A": {
+        "Identifier": "4",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 2,
+      "Identifier": "9",
+      "Position": "-192,-264",
+      "A": {
+        "Identifier": "2",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Divide",
+      "DefaultA": 1,
+      "DefaultB": 0,
+      "Identifier": "10",
+      "Position": "-528,36",
+      "A": {
+        "Identifier": "6",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "1",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "AppendVector",
+      "Identifier": "11",
+      "Position": "-120,-60",
+      "A": {
+        "Identifier": "8",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "12",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "12",
+      "Position": "-264,12",
+      "A": {
+        "Identifier": "4",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "13",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Floor",
+      "Identifier": "13",
+      "Position": "-432,36",
+      "Input": {
+        "Identifier": "10",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Divide",
+      "DefaultA": 0,
+      "DefaultB": 4,
+      "Identifier": "14",
+      "Position": "-36,-168",
+      "A": {
+        "Identifier": "9",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "1",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 1,
+      "Max": 20,
+      "Value": 2,
+      "Name": "Speed",
+      "IsAttribute": false,
+      "UI": {
+        "Type": "Slider",
+        "Step": 1,
+        "PrimaryGroup": {
+          "Name": "Controller"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "15",
+      "Position": "-1044,24"
+    },
+    {
+      "_class": "Add",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "16",
+      "Position": "108,-120",
+      "A": {
+        "Identifier": "14",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "11",
+        "Output": "Output"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/flipbook/flipbook.png",
+      "Sampler": {},
+      "UI": {
+        "Name": "Color",
+        "Default": "1,1,1,1",
+        "ShowExtension": true,
+        "SrgbRead": true
+      },
+      "Identifier": "17",
+      "Position": "216,-120",
+      "Coords": {
+        "Identifier": "16",
+        "Output": "Result"
+      }
+    }
+  ]
+}

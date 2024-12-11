@@ -1,0 +1,20 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Flipbook",
+      "Type": "shader",
+      "Org": "tiowevolve",
+      "Ident": "flipbook",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "shadergraphs/flipbook.shader"
+      }
+    }
+  }
+}

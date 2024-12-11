@@ -93,8 +93,8 @@ PS
 	
 	float4 g_vBaseColor < UiType( Color ); UiGroup( "Color,0/,0/0" ); Default4( 0.00, 0.20, 0.72, 1.00 ); >;
 	float g_flWaveletSpeed < UiType( Slider ); UiStep( 1 ); UiGroup( "Wavelet,0/,0/0" ); Default1( 1 ); Range1( 1, 10 ); >;
-	float g_flWaveletDensity < UiType( Slider ); UiStep( 1 ); UiGroup( "Wavelet,0/,0/0" ); Default1( 7.733821 ); Range1( 1, 20 ); >;
-	float g_flWaveletDistance < UiType( Slider ); UiStep( 1 ); UiGroup( "Wavelet,0/,0/0" ); Default1( 2.270408 ); Range1( 1, 10 ); >;
+	float g_flWaveletDensity < UiType( Slider ); UiStep( 1 ); UiGroup( "Wavelet,0/,0/0" ); Default1( 18.323002 ); Range1( 1, 20 ); >;
+	float g_flWaveletDistance < UiType( Slider ); UiStep( 1 ); UiGroup( "Wavelet,0/,0/0" ); Default1( 4.9549303 ); Range1( 1, 10 ); >;
 	float4 g_vWaveletColor < UiType( Color ); UiGroup( "Wavelet,0/,0/0" ); Default4( 0.53, 0.82, 0.99, 1.00 ); >;
 	float g_flOpacity < UiType( Slider ); UiGroup( "PBR,0/,0/0" ); Default1( 0.46967936 ); Range1( 0, 1 ); >;
 	float g_flRoughness < UiType( Slider ); UiGroup( "PBR,0/,0/0" ); Default1( 0.98332614 ); Range1( 0, 1 ); >;

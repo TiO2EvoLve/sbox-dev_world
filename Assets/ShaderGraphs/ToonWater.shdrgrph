@@ -38,7 +38,7 @@
       "CellDensity": 10,
       "Worley": false,
       "Identifier": "1",
-      "Position": "-300,-24",
+      "Position": "-252,-24",
       "A": {
         "Identifier": "4",
         "Output": "Result"
@@ -52,7 +52,7 @@
       "_class": "Float",
       "Min": 1,
       "Max": 20,
-      "Value": 7.733821,
+      "Value": 18.323002,
       "Name": "Wavelet Density",
       "IsAttribute": false,
       "UI": {
@@ -66,7 +66,7 @@
         }
       },
       "Identifier": "2",
-      "Position": "-492,180"
+      "Position": "-444,180"
     },
     {
       "_class": "Time",
@@ -78,7 +78,7 @@
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "4",
-      "Position": "-444,48",
+      "Position": "-396,48",
       "A": {
         "Identifier": "3",
         "Output": "Result"
@@ -106,14 +106,14 @@
         }
       },
       "Identifier": "5",
-      "Position": "-732,288"
+      "Position": "-684,288"
     },
     {
       "_class": "Power",
       "DefaultA": 1,
       "DefaultB": 1,
       "Identifier": "6",
-      "Position": "108,144",
+      "Position": "96,132",
       "A": {
         "Identifier": "1",
         "Output": "Result"
@@ -127,7 +127,7 @@
       "_class": "Float",
       "Min": 1,
       "Max": 10,
-      "Value": 2.270408,
+      "Value": 4.9549303,
       "Name": "Wavelet Distance",
       "IsAttribute": false,
       "UI": {
@@ -141,14 +141,14 @@
         }
       },
       "Identifier": "7",
-      "Position": "-300,216"
+      "Position": "-204,192"
     },
     {
       "_class": "Multiply",
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "8",
-      "Position": "300,228",
+      "Position": "276,192",
       "A": {
         "Identifier": "6",
         "Output": "Result"
@@ -170,7 +170,7 @@
         }
       },
       "Identifier": "9",
-      "Position": "-84,300"
+      "Position": "-36,300"
     },
     {
       "_class": "Float4",
@@ -184,14 +184,14 @@
         }
       },
       "Identifier": "10",
-      "Position": "132,-48"
+      "Position": "180,-48"
     },
     {
       "_class": "Add",
       "DefaultA": 0,
       "DefaultB": 1,
       "Identifier": "11",
-      "Position": "396,168",
+      "Position": "408,168",
       "A": {
         "Identifier": "10",
         "Output": "Result"
@@ -395,7 +395,7 @@
       "Description": "",
       "Layer": 2,
       "Identifier": "25",
-      "Position": "-792,-96"
+      "Position": "-744,-96"
     },
     {
       "_class": "Float",
@@ -424,13 +424,13 @@
       "Position": "-576,768"
     },
     {
-      "_class": "Max",
-      "DefaultA": 0,
-      "DefaultB": 0.05,
+      "_class": "Step",
+      "DefaultInput": 0.16666669,
+      "DefaultEdge": 0.5,
       "Identifier": "28",
-      "Position": "216,324",
-      "InputA": {
-        "Identifier": "6",
+      "Position": "240,300",
+      "Edge": {
+        "Identifier": "1",
         "Output": "Result"
       }
     }

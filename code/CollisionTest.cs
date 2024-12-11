@@ -21,13 +21,14 @@ public sealed class CollisionTest : Component,Component.ICollisionListener
 	{
 		if ( TimeSince >= 0.2)
 		{
-			Rigidbody.ApplyForce( Vector3.Up * power);
-			TimeSince = 0;
+			
 		}
 	}
 
 	public void OnCollisionUpdate( Collision other )
 	{
+		Rigidbody.ApplyForce( Vector3.Up * power);
+		TimeSince = 0;
 	}
 
 	public void OnCollisionStop( CollisionStop other )

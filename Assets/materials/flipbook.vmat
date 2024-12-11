@@ -1,0 +1,16 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shadergraphs/flipbook.shader"
+
+	Color "materials/flipbook/flipbook.png"
+
+	//---- Controller ----
+	g_flRow "4"
+	g_flSpeed "2"
+	g_flTiles "1"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+}

@@ -24,8 +24,8 @@ Layer0
 	ASprayNormal "materials/rain/NormalMap.png"
 	BSprayNormal "materials/rain/NormalMap.png"
 	g_flASpraySpeed "15"
-	g_flASprayTiles "1.0"
+	g_flASprayTiles "1.6"
 	g_flBSpraySpeed "15"
-	g_flBSprayTiles "1.6"
+	g_flBSprayTiles "2.0"
 	g_flRow "4"
 }
