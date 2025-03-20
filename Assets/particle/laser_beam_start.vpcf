@@ -376,6 +376,7 @@
 			{
 				m_nType = "PVEC_TYPE_FLOAT_INTERP_GRADIENT"
 				m_vLiteralValue = [ 0.0, 0.0, 0.0 ]
+				m_NamedValue = ""
 				m_LiteralColor = [ 0, 0, 0, 0 ]
 				m_nVectorAttribute = 6
 				m_vVectorAttributeScale = [ 1.0, 1.0, 1.0 ]
@@ -387,6 +388,7 @@
 				{
 					m_nType = "PF_TYPE_LITERAL"
 					m_nMapType = "PF_MAP_TYPE_DIRECT"
+					m_NamedValue = ""
 					m_flLiteralValue = 0.0
 					m_nControlPoint = 0
 					m_nScalarAttribute = 3
@@ -432,6 +434,7 @@
 				{
 					m_nType = "PF_TYPE_LITERAL"
 					m_nMapType = "PF_MAP_TYPE_DIRECT"
+					m_NamedValue = ""
 					m_flLiteralValue = 0.0
 					m_nControlPoint = 0
 					m_nScalarAttribute = 3
@@ -477,6 +480,7 @@
 				{
 					m_nType = "PF_TYPE_LITERAL"
 					m_nMapType = "PF_MAP_TYPE_DIRECT"
+					m_NamedValue = ""
 					m_flLiteralValue = 0.0
 					m_nControlPoint = 0
 					m_nScalarAttribute = 3
@@ -522,6 +526,7 @@
 				{
 					m_nType = "PF_TYPE_PARTICLE_NOISE"
 					m_nMapType = "PF_MAP_TYPE_DIRECT"
+					m_NamedValue = ""
 					m_flLiteralValue = 0.0
 					m_nControlPoint = 0
 					m_nScalarAttribute = 3
@@ -573,11 +578,11 @@
 					[
 						{
 							m_flPosition = 0.0
-							m_Color = [ 0, 255, 255, 255 ]
+							m_Color = [ 255, 0, 0, 255 ]
 						},
 						{
 							m_flPosition = 1.0
-							m_Color = [ 254, 254, 254, 255 ]
+							m_Color = [ 255, 80, 0, 255 ]
 						},
 					]
 				}
